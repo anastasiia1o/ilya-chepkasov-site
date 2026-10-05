@@ -1,6 +1,6 @@
 # Ilya Chepkasov — academic website
 
-Six-page RU/EN scientific profile, published directly from this repository through GitHub Pages. Static HTML, CSS and JavaScript; no build dependencies, external fonts, trackers, forms or runtime API keys.
+Private working version of a six-page RU/EN scientific profile. Static HTML, CSS and JavaScript; no build dependencies, external fonts, trackers, forms or runtime API keys.
 
 ## Preview
 
@@ -8,9 +8,7 @@ From this directory: `python -m http.server 8766 --bind 127.0.0.1`
 
 Open http://127.0.0.1:8766/ for local preview. The loopback address is available only on this computer.
 
-Public website: https://anastasiia1o.github.io/ilya-chepkasov-site/
-
-GitHub Pages serves the root of `codex/initial-site` in this repository. Regenerate the six pages, verify changes and push this branch to update the live website. No separate deployment copy is required. `.nojekyll` enables direct static-file serving. Public publication was explicitly authorized on 2026-10-05.
+Public access is disabled at the user's request on 2026-10-05. GitHub Pages is disabled, the source repository is private, and the former public URL returns HTTP 404. Keep Pages disabled until a new explicit request to publish. `noindex,nofollow` is restored as an indexing precaution; it is not an access restriction. Regenerate pages, verify changes and push `codex/initial-site` to save private source updates. No separate deployment copy is required.
 
 ## Structure
 
@@ -49,4 +47,4 @@ To refresh Crossref metadata: `python scripts/import_publications.py`. Review th
 
 ## Ownership
 
-The source repository and website are public. Collaborator access and ownership transfer remain unconfigured; they can be handled after recipient details are supplied. Local `.preview/` files, inspection PDFs and verification screenshots are excluded from Git and deployment.
+The source repository is private and GitHub Pages is disabled. Collaborator access and ownership transfer remain unconfigured; they can be handled after recipient details are supplied. Local `.preview/` files, inspection PDFs and verification screenshots are excluded from Git. Decorative link arrows are removed throughout the site. On phones, the name and portrait share the top row, while position, topic links and primary actions occupy full-width rows.
