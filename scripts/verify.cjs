@@ -69,6 +69,7 @@ const path=require('node:path');
     const height=await page.evaluate(()=>document.documentElement.scrollHeight);
     desktopHeights.push({...size,file,language,documentHeight:height});
     if(file==='publications.html')assert(height>size.height);
+    else if(file==='index.html')assert(height<=1150,`${file} ${language}: excessive homepage height ${height}`);
     else assert(height<=size.height,`${file} ${language}: ${height} > ${size.height}`);
    }
   }
