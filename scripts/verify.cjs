@@ -17,8 +17,8 @@ const path=require('node:path');
    assert.equal(await page.locator('h1').count(),1,file);
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
    assert.equal(overflow,false,`${file}: horizontal overflow at ${width}`);
-   for(const img of await page.locator('img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());}
-   assert.equal(await page.evaluate(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0)),true,file);
+   for(const img of await page.locator('img:visible').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());}
+   assert.equal(await page.evaluate(()=>[...document.images].filter(i=>i.getClientRects().length).every(i=>i.complete&&i.naturalWidth>0)),true,file);
    await page.evaluate(()=>scrollTo(0,0));
    await page.locator('[data-lang="en"]').click();
    assert.equal(await page.locator('html').getAttribute('lang'),'en');
@@ -81,6 +81,43 @@ const path=require('node:path');
  await page.screenshot({path:'.preview/research-background.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});
  await page.screenshot({path:'.preview/research-background-mobile.png',fullPage:true});
+ const areas=['catalysis','batteries','2d','thermoelectrics','modeling'];
+ for(const viewport of [{width:1366,height:768},{width:780,height:1000},{width:390,height:844},{width:320,height:700}]){
+  await page.setViewportSize(viewport);
+  for(const area of areas){
+   await page.locator(`[data-area="${area}"]`).click();
+   assert.equal(await page.locator('[role="tabpanel"]:visible').count(),1);
+   assert.equal(await page.locator(`[data-area="${area}"]`).getAttribute('aria-selected'),'true');
+   assert.equal(new URL(page.url()).searchParams.get('area'),area);
+   for(const img of await page.locator('img:visible').all())await img.evaluate(i=>i.decode());
+   for(const language of ['en','ru']){
+    await page.locator(`[data-lang="${language}"]`).click();
+    assert.equal(await page.locator(`#panel-${area}`).isVisible(),true);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    if(viewport.width>780)assert(await page.evaluate(()=>document.documentElement.scrollHeight)<=viewport.height);
+   }
+   if(viewport.width===1366||viewport.width===390)await page.screenshot({path:`.preview/research-${area}-${viewport.width}.png`,fullPage:true});
+  }
+ }
+ await page.goto('http://127.0.0.1:8766/research.html?lang=en&area=2d');
+ assert.equal(await page.locator('#panel-2d').isVisible(),true);
+ await page.locator('#tab-2d').focus();await page.keyboard.press('ArrowDown');
+ assert.equal(await page.locator('#panel-thermoelectrics').isVisible(),true);
+ await page.keyboard.press('Home');assert.equal(await page.locator('#panel-catalysis').isVisible(),true);
+ await page.keyboard.press('End');assert.equal(await page.locator('#panel-modeling').isVisible(),true);
+ for(const area of areas){
+  await page.locator(`[data-area="${area}"]`).click();
+  await page.locator(`#panel-${area} [data-open-image]`).click();
+  assert.equal(await page.locator('#figure-viewer').isVisible(),true);
+  await page.locator('#figure-original').evaluate(i=>i.decode());
+  const expected=await page.locator(`#panel-${area} .study-caption [data-en]`).first().getAttribute('data-en');
+  assert.equal(await page.locator('#figure-original').getAttribute('alt'),expected);
+  assert.equal(await page.evaluate(()=>{const box=document.querySelector('#figure-viewer').getBoundingClientRect();return box.left>=0&&box.right<=innerWidth&&box.top>=0&&box.bottom<=innerHeight;}),true);
+  await page.keyboard.press('Escape');assert.equal(await page.locator('#figure-viewer').isVisible(),false);
+ }
+ await page.goto('http://127.0.0.1:8766/index.html?lang=ru');
+ await page.locator('.research-chips a').nth(1).click();
+ assert.equal(await page.locator('#panel-batteries').isVisible(),true);
  assert.deepEqual(errors,[]);
  // Validate every local href/src, including source-language content and data.
  let links=0;
@@ -94,6 +131,9 @@ const path=require('node:path');
  const pubs=JSON.parse(fs.readFileSync('assets/data/publications.json','utf8'));
  assert.equal(new Set(pubs.filter(r=>r.doi).map(r=>r.doi)).size,pubs.filter(r=>r.doi).length);
  assert(pubs.every(r=>r.authors.toLowerCase().includes('chepkasov')&&r.title&&r.journal&&r.year));
- console.log(JSON.stringify({pages:6,widths:[1440,780,390,320],languages:2,publications:pubs.length,reviews:3,localLinks:links,consoleErrors:errors,checks:'full scrollable catalog, search, year, type, sort, empty, reset, language, background asset, compact other pages'},null,2));
+ for(const href of await page.locator('.study-reference a').evaluateAll(links=>links.map(a=>a.href))){
+  assert(pubs.some(p=>'https://doi.org/'+p.doi.toLowerCase()===href.toLowerCase()),href);
+ }
+ console.log(JSON.stringify({pages:6,widths:[1440,780,390,320],languages:2,publications:pubs.length,reviews:3,researchAreas:5,localLinks:links,consoleErrors:errors,checks:'scrollable catalog and filters; research tabs, deep links, keyboard, original-image viewer, verified DOI matches; bilingual responsive and compact desktop pages'},null,2));
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

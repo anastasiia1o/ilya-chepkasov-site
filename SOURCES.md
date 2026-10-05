@@ -10,6 +10,18 @@
 8. Supplied image `pic1.jpg`: consistent with the graphical abstract and subject of DOI https://doi.org/10.1002/smll.202510144; attached to that study, not used as a generic molecular decoration. The associated official Skoltech account: https://www.skoltech.ru/en/news/rossijskie-uchyonye-ustanovili-prichinu-vysokoj-effektivnosti-elektrokatalizatorov-dlya-himicheskih-istochnikov-toka.
 9. Supporting institutional accounts: https://www.skoltech.ru/en/news/skoltech-researchers-find-way-reduce-platinum-catalysts and https://www.skoltech.ru/en/news/method-found-improve-reliability-thermoelectrics-high-performance-generators.
 
+## Research illustrations — 2026-10-05
+
+All selected studies list I. V. Chepkasov as an author in the IOCD publication list, their PDFs and/or publisher metadata. Concise descriptions state the study subject without assigning individual contributions.
+
+- Nanocatalysis: supplied `pt-carbon.jpg`, DOI 10.1002/smll.202510144 (Small, 2025). Only the presentation background crops/fades the hand motif; the full original is available in the figure viewer.
+- Battery materials: `battery-review.webp` copied unchanged from https://iocd.ru/assets/review/2026_JPMS101713.webp; DOI 10.1016/j.pmatsci.2026.101713 (Progress in Materials Science, 2026). Illustrates the coauthored review, not original experimental results attributed to Ilya.
+- Two-dimensional materials: `v3s4-monolayer.jpg`, original embedded Figure 2 extracted from https://iocd.ru/assets/pdfs/all_publications/2022_%D1%81omputational_%20design_of_gas_sensors.pdf; DOI 10.3390/nano12050774 (Nanomaterials, 2022). Full atomic/phonon/band panels are preserved.
+- Thermoelectrics: `pbte-defects.jpg`, original embedded Figure 1 extracted from https://iocd.ru/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf; DOI 10.1039/d5ta00823a (Journal of Materials Chemistry A, 2025).
+- Atomistic modeling: `pbte-simulation.png`, original embedded Figure 6 from the same PbTe paper; the paper explicitly describes DFT and neural-network interatomic potentials for deformation simulations. The thermoelectrics and modeling tabs intentionally illustrate two aspects of the same verified study.
+
+PDFs used for inspection remain in ignored `.preview/`, and are not distributed as part of the website. Figures retain their original colors, labels and geometry; each is credited to its paper through a visible journal/year/DOI link. This records provenance and does not claim a new redistribution license. Before any public publication, image permissions should be confirmed with the recipient/publishers; the current site is private.
+
 ## Bibliographic corrections
 
 - CV spells the electrolyte composition Li3MX3 in item 3; Crossref/paper title uses Li3MX6. Publisher spelling retained.

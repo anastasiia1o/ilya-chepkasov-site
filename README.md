@@ -11,7 +11,7 @@ Open http://127.0.0.1:8766/. The loopback address is available only on this comp
 ## Structure
 
 - `index.html`: name, position, four research topics, profile links and portrait
-- `research.html`: five research areas with supporting DOI links
+- `research.html`: five interactive research areas, corresponding papers/figures and supporting DOI links
 - `publications.html`: search across title/authors/journal/DOI/year, year and type filters, chronological/title/review-first sorting
 - `activities.html`: research projects, conferences, reviewing and teaching
 - `cv.html`: six short career milestones; no CV PDF is stored or offered for download
@@ -19,7 +19,7 @@ Open http://127.0.0.1:8766/. The loopback address is available only on this comp
 
 Language switches preserve filters and current page. Preferences persist locally; `?lang=ru` and `?lang=en` override the saved preference. Publication filters are shareable in the URL. Paper titles and journal names retain their original bibliographic language.
 
-The compact layout uses Segoe UI/Arial throughout. Publications form one continuous scrollable list on all screens. Search and filters cover the full catalog; author lists expand on demand. Other pages remain compact. Short factual headings replace slogans and decorative section numbering. The supplied Pt/C illustration appears as a cropped, softly faded CSS background on the research page; the original image is preserved.
+The compact layout uses Segoe UI/Arial throughout. Publications form one continuous scrollable list on all screens. Search and filters cover the full catalog; author lists expand on demand. Other pages remain compact. Short factual headings replace slogans and decorative section numbering. Homepage topic links open the corresponding research area. The selected area persists in `?area=` across language changes; tabs support arrow keys, Home and End. Each area shows a verified coauthored paper and its original illustration. The supplied Pt/C illustration appears as a cropped, softly faded CSS background. Other figures appear whole, without recoloring or altered scientific content. “Original” opens a native modal with the full figure; Escape closes it. Source originals and image credits are preserved.
 
 ## Editing
 
@@ -41,7 +41,7 @@ To refresh Crossref metadata: `python scripts/import_publications.py`. Review th
 
 ## Verification
 
-`scripts/verify.cjs` uses Playwright. Serve on port 8766 and run with this library available through local installation or `NODE_PATH`. It checks six pages, RU/EN at 1440/780/390/320 px, overflow, loaded images and background asset, local links, publication search/filter/sort combinations, full-list coverage, mobile navigation and DOI uniqueness. It also checks that pages other than publications fit desktop viewports of 1440×900 and 1366×768. Screenshots/logs stay in ignored `.preview/`.
+`scripts/verify.cjs` uses Playwright. Serve on port 8766 and run with this library available through local installation or `NODE_PATH`. It checks six pages, RU/EN at 1440/780/390/320 px, overflow, loaded images and background asset, local links, publication search/filter/sort combinations, full-list coverage, mobile navigation and DOI uniqueness. It also checks research tabs, keyboard operation, deep links, language-state persistence, original-figure modal bounds/decoding/Escape, and supporting DOI membership in the verified catalog. Pages other than publications fit desktop viewports of 1440×900 and 1366×768. Screenshots/logs stay in ignored `.preview/`.
 
 ## Ownership
 
