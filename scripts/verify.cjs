@@ -31,24 +31,13 @@ const path=require('node:path');
  }
  await page.setViewportSize({width:1440,height:1000});
  await page.goto('http://127.0.0.1:8766/publications.html?lang=ru');
- assert.equal(await page.locator('.publication').count(),4);
- assert.equal(await page.locator('#page-status').textContent(),'1 из 16');
- const firstTitle=await page.locator('.publication h2').first().textContent();
- await page.locator('#page-next').click();
- assert.notEqual(await page.locator('.publication h2').first().textContent(),firstTitle);
- assert.equal(await page.locator('#page-status').textContent(),'2 из 16');
- await page.reload();assert.equal(await page.locator('#page-status').textContent(),'2 из 16');
- await page.locator('[data-lang="en"]').click();assert.equal(await page.locator('#page-status').textContent(),'2 of 16');
- await page.locator('[data-lang="ru"]').click();
- await page.locator('#page-prev').click();assert.equal(await page.locator('#page-status').textContent(),'1 из 16');
- // Every catalog item remains reachable exactly once through pagination.
- const titles=[];
- for(let i=0;i<16;i++){
-  titles.push(...await page.locator('.publication h2').allTextContents());
-  if(i<15)await page.locator('#page-next').click();
- }
- assert.equal(titles.length,64);assert.equal(new Set(titles).size,64);
- assert.equal(await page.locator('#page-next').isDisabled(),true);
+ assert.equal(await page.locator('.publication').count(),64);
+ assert.equal(await page.locator('.pagination').count(),0);
+ const titles=await page.locator('.publication h2').allTextContents();
+ assert.equal(new Set(titles).size,64);
+ await page.locator('.publication').last().scrollIntoViewIfNeeded();
+ assert(await page.evaluate(()=>scrollY>0));
+ await page.evaluate(()=>scrollTo(0,0));
  await page.locator('[data-type="review"]').click();assert.equal(await page.locator('.publication').count(),3);
  await page.locator('#year').selectOption('2024');assert.equal(await page.locator('.publication').count(),1);
  await page.locator('#search').fill('core shell');assert.equal(await page.locator('.publication').count(),1);
@@ -57,20 +46,19 @@ const path=require('node:path');
  assert.equal(await page.locator('#year').inputValue(),'2024');
  await page.reload();assert.equal(await page.locator('.publication').count(),1);
  await page.locator('#search').fill('zzzznonexistent');assert.equal(await page.locator('.publication').count(),0);assert.equal(await page.locator('#empty').isVisible(),true);
- await page.locator('#reset').click();assert.equal(await page.locator('.publication').count(),4);
+ await page.locator('#reset').click();assert.equal(await page.locator('.publication').count(),64);
  await page.locator('#sort').selectOption('old');assert.equal(await page.locator('.publication-year').first().textContent(),'2010');
  await page.locator('#sort').selectOption('type');assert.equal(await page.locator('.type-label').first().textContent(),'Review');
  await page.locator('summary').first().click();assert.equal(await page.locator('details').first().getAttribute('open'),'');
  await page.locator('#search').fill('10.1002/smll.202510144');assert.equal(await page.locator('.publication').count(),1);
  await page.locator('#search').fill('');await page.locator('#sort').selectOption('new');
- await page.screenshot({path:'.preview/publications-desktop.png',fullPage:true});
+ await page.screenshot({path:'.preview/publications-desktop.png',fullPage:false});
  await page.goto('http://127.0.0.1:8766/index.html?lang=ru');await page.screenshot({path:'.preview/home-desktop.png',fullPage:true});
  await page.locator('[data-lang="en"]').click();await page.screenshot({path:'.preview/home-english.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});await page.reload();await page.locator('#menu-toggle').click();assert.equal(await page.locator('#nav').isVisible(),true);
  await page.locator('#nav a[href*="research.html"]').click();assert.equal(await page.locator('html').getAttribute('lang'),'en');
  await page.goto('http://127.0.0.1:8766/publications.html?lang=ru');
- assert.equal(await page.locator('.publication').count(),2);
- assert.equal(await page.locator('#page-status').textContent(),'1 из 32');
+ assert.equal(await page.locator('.publication').count(),64);
  const desktopHeights=[];
  for(const size of [{width:1440,height:900},{width:1366,height:768}]){
   await page.setViewportSize(size);
@@ -80,10 +68,19 @@ const path=require('node:path');
     await page.locator(`[data-lang="${language}"]`).click();
     const height=await page.evaluate(()=>document.documentElement.scrollHeight);
     desktopHeights.push({...size,file,language,documentHeight:height});
-    assert(height<=size.height,`${file} ${language}: ${height} > ${size.height}`);
+    if(file==='publications.html')assert(height>size.height);
+    else assert(height<=size.height,`${file} ${language}: ${height} > ${size.height}`);
    }
   }
  }
+ await page.goto('http://127.0.0.1:8766/research.html?lang=ru');
+ const background=await page.locator('.research-art').evaluate(el=>getComputedStyle(el).backgroundImage);
+ assert(background.includes('pt-carbon.jpg'));
+ assert.equal(await page.locator('.research-aside figure').count(),0);
+ await page.evaluate(async()=>{const i=new Image();i.src='assets/images/pt-carbon.jpg';await i.decode();});
+ await page.screenshot({path:'.preview/research-background.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ await page.screenshot({path:'.preview/research-background-mobile.png',fullPage:true});
  assert.deepEqual(errors,[]);
  // Validate every local href/src, including source-language content and data.
  let links=0;
@@ -97,6 +94,6 @@ const path=require('node:path');
  const pubs=JSON.parse(fs.readFileSync('assets/data/publications.json','utf8'));
  assert.equal(new Set(pubs.filter(r=>r.doi).map(r=>r.doi)).size,pubs.filter(r=>r.doi).length);
  assert(pubs.every(r=>r.authors.toLowerCase().includes('chepkasov')&&r.title&&r.journal&&r.year));
- console.log(JSON.stringify({pages:6,widths:[1440,780,390,320],languages:2,publications:pubs.length,reviews:3,localLinks:links,consoleErrors:errors,desktopHeights,checks:'pagination coverage, boundaries, page reload, search, year, type, sort, empty, reset, language, responsive page size, desktop page length'},null,2));
+ console.log(JSON.stringify({pages:6,widths:[1440,780,390,320],languages:2,publications:pubs.length,reviews:3,localLinks:links,consoleErrors:errors,checks:'full scrollable catalog, search, year, type, sort, empty, reset, language, background asset, compact other pages'},null,2));
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

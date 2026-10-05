@@ -7,10 +7,6 @@
   try { saved = localStorage.getItem('ic-language'); } catch {}
   let lang = ['ru','en'].includes(params.get('lang')) ? params.get('lang') : saved === 'en' ? 'en' : 'ru';
   let type = ['review','article','conference'].includes(params.get('type')) ? params.get('type') : 'all';
-  let currentPage = Math.max(1, Math.min(1000, Number.parseInt(params.get('page'),10) || 1));
-  const smallScreen = matchMedia('(max-width: 780px)');
-  const shortScreen = matchMedia('(max-height: 800px)');
-  const pageSize = () => smallScreen.matches ? 2 : shortScreen.matches ? 3 : 4;
   const words = {ru:{review:'Обзор',article:'Статья',conference:'Материалы конференции',authors:'Авторы',copy:'Копировать DOI',copied:'Скопировано',failed:'DOI: ',count:'Найдено',read:'Читать обзор'},en:{review:'Review',article:'Article',conference:'Conference paper',authors:'Authors',copy:'Copy DOI',copied:'Copied',failed:'DOI: ',count:'Found',read:'Read review'}};
   const normalize = s => s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -47,7 +43,8 @@
   function updateUrl() {
     const url=new URL(location.href);url.searchParams.set('lang',lang);
     if ($('#publication-list')) {
-      const state={q:$('#search').value.trim(),year:$('#year').value,type,sort:$('#sort').value,page:currentPage===1?'':String(currentPage)};
+      url.searchParams.delete('page');
+      const state={q:$('#search').value.trim(),year:$('#year').value,type,sort:$('#sort').value};
       Object.entries(state).forEach(([key,value])=>{if(!value||value==='all'||value==='new')url.searchParams.delete(key);else url.searchParams.set(key,value);});
     }
     try {history.replaceState(null,'',url);} catch {}
@@ -58,16 +55,9 @@
     const selected=rows.filter(r=>(type==='all'||r.type===type)&&(year==='all'||String(r.year)===year)&&query.every(word=>normalize(`${r.title} ${r.authors} ${r.journal} ${r.doi} ${r.year}`).includes(word)));
     const alpha=(a,b)=>a.title.localeCompare(b.title,'en');
     selected.sort((a,b)=>sort==='title'?alpha(a,b):sort==='old'?a.year-b.year||alpha(a,b):sort==='type'?(a.type==='review'?0:1)-(b.type==='review'?0:1)||b.year-a.year||alpha(a,b):b.year-a.year||alpha(a,b));
-    const pages=Math.max(1,Math.ceil(selected.length/pageSize()));
-    currentPage=Math.min(currentPage,pages);
-    const visible=selected.slice((currentPage-1)*pageSize(),currentPage*pageSize());
-    target.innerHTML=visible.map(r=>`<article class="publication"><span class="publication-year">${r.year}</span><div><h2><a href="${r.doi?'https://doi.org/'+esc(r.doi):'https://scholar.google.com/scholar?q='+encodeURIComponent(r.title)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></h2><div class="pub-meta"><span class="type-label">${words[lang][r.type]}</span>${esc(r.journal)}${r.volume?' · '+esc(r.volume):''}${r.pages?' · '+esc(r.pages):''}</div><details><summary>${words[lang].authors}</summary><p>${esc(r.authors)}</p></details></div><div class="pub-actions">${r.doi?`<a class="text-link" href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a><button class="copy-doi" data-doi="${esc(r.doi)}">${words[lang].copy}</button>`:`<a href="https://scholar.google.com/scholar?q=${encodeURIComponent(r.title)}" target="_blank" rel="noopener noreferrer">Scholar ↗</a>`}</div></article>`).join('');
+    target.innerHTML=selected.map(r=>`<article class="publication"><span class="publication-year">${r.year}</span><div><h2><a href="${r.doi?'https://doi.org/'+esc(r.doi):'https://scholar.google.com/scholar?q='+encodeURIComponent(r.title)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></h2><div class="pub-meta"><span class="type-label">${words[lang][r.type]}</span>${esc(r.journal)}${r.volume?' · '+esc(r.volume):''}${r.pages?' · '+esc(r.pages):''}</div><details><summary>${words[lang].authors}</summary><p>${esc(r.authors)}</p></details></div><div class="pub-actions">${r.doi?`<a class="text-link" href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a><button class="copy-doi" data-doi="${esc(r.doi)}">${words[lang].copy}</button>`:`<a href="https://scholar.google.com/scholar?q=${encodeURIComponent(r.title)}" target="_blank" rel="noopener noreferrer">Scholar ↗</a>`}</div></article>`).join('');
     $('#result-count').textContent=`${words[lang].count}: ${selected.length} / ${rows.length}`;
     $('#empty').hidden=selected.length>0;
-    $('.pagination').hidden=pages===1;
-    $('#page-prev').disabled=currentPage===1;
-    $('#page-next').disabled=currentPage===pages;
-    $('#page-status').textContent=lang==='ru'?`${currentPage} из ${pages}`:`${currentPage} of ${pages}`;
     all('[data-type]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===type)));
   }
   $('#publication-list')?.addEventListener('click',async event=>{
@@ -75,12 +65,8 @@
     try {await navigator.clipboard.writeText(button.dataset.doi);button.textContent=words[lang].copied;}
     catch {button.textContent=words[lang].failed+button.dataset.doi;}
   });
-  all('[data-type]').forEach(b=>b.addEventListener('click',()=>{type=b.dataset.type;currentPage=1;renderPublications();updateUrl();}));
-  ['search','year','sort'].forEach(id=>$('#'+id)?.addEventListener(id==='search'?'input':'change',()=>{currentPage=1;renderPublications();updateUrl();}));
-  $('#reset')?.addEventListener('click',()=>{$('#search').value='';$('#year').value='all';$('#sort').value='new';type='all';currentPage=1;renderPublications();updateUrl();$('#search').focus();});
-  $('#page-prev')?.addEventListener('click',()=>{currentPage=Math.max(1,currentPage-1);renderPublications();updateUrl();});
-  $('#page-next')?.addEventListener('click',()=>{currentPage++;renderPublications();updateUrl();});
-  smallScreen.addEventListener('change',()=>{currentPage=1;renderPublications();updateUrl();});
-  shortScreen.addEventListener('change',()=>{currentPage=1;renderPublications();updateUrl();});
+  all('[data-type]').forEach(b=>b.addEventListener('click',()=>{type=b.dataset.type;renderPublications();updateUrl();}));
+  ['search','year','sort'].forEach(id=>$('#'+id)?.addEventListener(id==='search'?'input':'change',()=>{renderPublications();updateUrl();}));
+  $('#reset')?.addEventListener('click',()=>{$('#search').value='';$('#year').value='all';$('#sort').value='new';type='all';renderPublications();updateUrl();$('#search').focus();});
   translate();
 })();
