@@ -11,7 +11,7 @@ Open http://127.0.0.1:8766/. The loopback address is available only on this comp
 ## Structure
 
 - `index.html`: name, position, four research topics, profile links and portrait
-- `research.html`: five interactive research areas, corresponding papers/figures and supporting DOI links
+- `research.html`: five large interactive research panels, brief descriptions, corresponding papers/figures and supporting DOI links; the battery panel uses a horizontal original figure from the 2025 organic-anode study
 - `publications.html`: search across title/authors/journal/DOI/year, year and type filters, chronological/title/review-first sorting
 - `activities.html`: research projects, conferences, reviewing and teaching
 - `cv.html`: six short career milestones; no CV PDF is stored or offered for download
@@ -19,7 +19,7 @@ Open http://127.0.0.1:8766/. The loopback address is available only on this comp
 
 Language switches preserve filters and current page. Preferences persist locally; `?lang=ru` and `?lang=en` override the saved preference. Publication filters are shareable in the URL. Paper titles and journal names retain their original bibliographic language.
 
-The compact layout uses Segoe UI/Arial throughout. Publications form one continuous scrollable list on all screens. Search and filters cover the full catalog; author lists expand on demand. Other pages remain compact. Short factual headings replace slogans and decorative section numbering. Homepage topic links open the corresponding research area. The selected area persists in `?area=` across language changes; tabs support arrow keys, Home and End. The nanocatalysis panel shows only the full supplied 1280×489 illustration, without website headings, description or caption, at a maximum display width of 640 CSS pixels for crisp rendering. Clicking it opens the original. Other areas show verified coauthored papers and complete original figures without recoloring or altered scientific content. The original-figure modal closes with Escape. Source originals and image credits are preserved.
+The compact layout uses Segoe UI/Arial throughout. Publications form one continuous scrollable list on all screens. Search and filters cover the full catalog; author lists expand on demand. Other pages remain compact. Short factual headings replace slogans and decorative section numbering. Homepage topic links open the corresponding research area. The selected area persists in `?area=` across language changes; tabs support arrow keys, Home and End. Five large topic panels switch between a concise bilingual description and the corresponding original illustration. The nanocatalysis description covers bimetallic/core–shell nanoparticles and adsorption/catalytic properties. It does not restore the removed Pt/C heading or journal label. All figure images open in the original-figure modal, which closes with Escape. Display width is limited to 640 CSS pixels for the supplied 1280×489 illustration. Other directions retain small journal/DOI links. Navigation, body text, controls and metadata use slightly larger type throughout the site. Source originals and image credits are preserved.
 
 ## Editing
 

@@ -74,9 +74,10 @@ const path=require('node:path');
   }
  }
  await page.goto('http://127.0.0.1:8766/research.html?lang=ru');
- assert.equal(await page.locator('#panel-catalysis').innerText(),'');
+ assert(await page.locator('#panel-catalysis .study-description').innerText());
  assert.equal(await page.locator('#panel-catalysis img').count(),1);
- assert.equal(await page.locator('#panel-catalysis .study-copy,#panel-catalysis .study-caption').count(),0);
+ assert.equal(await page.locator('#panel-catalysis h2').count(),0);
+ assert(await page.locator('#tab-catalysis').evaluate(el=>el.getBoundingClientRect().height)>=76);
  assert.equal(await page.locator('#panel-catalysis img').evaluate(i=>getComputedStyle(i).filter),'none');
  await page.evaluate(async()=>{const i=new Image();i.src='assets/images/pt-carbon.jpg';await i.decode();});
  await page.screenshot({path:'.preview/research-background.png',fullPage:true});
@@ -111,7 +112,7 @@ const path=require('node:path');
   await page.locator(`#panel-${area} [data-open-image]`).click();
   assert.equal(await page.locator('#figure-viewer').isVisible(),true);
   await page.locator('#figure-original').evaluate(i=>i.decode());
-  const expected=area==='catalysis'?await page.locator('#panel-catalysis img').getAttribute('data-alt-en'):await page.locator(`#panel-${area} .study-caption [data-en]`).first().getAttribute('data-en');
+  const expected=await page.locator(`#panel-${area} img`).getAttribute('data-alt-en');
   assert.equal(await page.locator('#figure-original').getAttribute('alt'),expected);
   assert.equal(await page.evaluate(()=>{const box=document.querySelector('#figure-viewer').getBoundingClientRect();return box.left>=0&&box.right<=innerWidth&&box.top>=0&&box.bottom<=innerHeight;}),true);
   await page.keyboard.press('Escape');assert.equal(await page.locator('#figure-viewer').isVisible(),false);
@@ -132,7 +133,7 @@ const path=require('node:path');
  const pubs=JSON.parse(fs.readFileSync('assets/data/publications.json','utf8'));
  assert.equal(new Set(pubs.filter(r=>r.doi).map(r=>r.doi)).size,pubs.filter(r=>r.doi).length);
  assert(pubs.every(r=>r.authors.toLowerCase().includes('chepkasov')&&r.title&&r.journal&&r.year));
- for(const href of await page.locator('.study-reference a').evaluateAll(links=>links.map(a=>a.href))){
+ for(const href of await page.locator('.study-caption a').evaluateAll(links=>links.map(a=>a.href))){
   assert(pubs.some(p=>'https://doi.org/'+p.doi.toLowerCase()===href.toLowerCase()),href);
  }
  console.log(JSON.stringify({pages:6,widths:[1440,780,390,320],languages:2,publications:pubs.length,reviews:3,researchAreas:5,localLinks:links,consoleErrors:errors,checks:'scrollable catalog and filters; research tabs, deep links, keyboard, original-image viewer, verified DOI matches; bilingual responsive and compact desktop pages'},null,2));

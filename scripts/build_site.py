@@ -30,7 +30,7 @@ home=f'''<section class="hero container"><div class="hero-copy">{t('Вычисл
 page('index.html','Главная','Home',home,True)
 WORKS=[
 ('Pt/C','Pt/C','Азотированный углеродный носитель','Nitrogen-doped carbon support','Small · 2025','10.1002/smll.202510144','pt-carbon.jpg','Графическая аннотация работы о Pt/C','Graphical abstract of the Pt/C study'),
-('Органические электроды','Organic electrodes','Полициклические ароматические углеводороды в металл-ионных аккумуляторах.','Polycyclic aromatic hydrocarbons in metal-ion batteries.','Progress in Materials Science · 2026','10.1016/j.pmatsci.2026.101713','battery-review.webp','Схема материалов для металл-ионных аккумуляторов из обзора','Metal-ion battery materials diagram from the review'),
+('Органические электроды','Organic electrodes','Полициклические ароматические углеводороды в металл-ионных аккумуляторах.','Polycyclic aromatic hydrocarbons in metal-ion batteries.','Journal of Energy Storage · 2025','10.1016/j.est.2025.116831','battery-anodes.jpg','Энергия образования и напряжение для тетрацена с Li, Na, K и Ca; рисунок 4','Formation enthalpy and voltage of tetracene with Li, Na, K and Ca; Figure 4'),
 ('Монослой V₃S₄','V₃S₄ monolayer','Атомная структура и электронные свойства материала для газовых сенсоров.','Atomic structure and electronic properties of a gas-sensing material.','Nanomaterials · 2022','10.3390/nano12050774','v3s4-monolayer.jpg','Структура, фононы и зонная структура V₃S₄; рисунок 2','V₃S₄ structure, phonons and electronic bands; Figure 2'),
 ('Дефекты в PbTe','Defects in PbTe','Легирование, химическая связь и механические свойства.','Doping, chemical bonding and mechanical properties.','Journal of Materials Chemistry A · 2025','10.1039/d5ta00823a','pbte-defects.jpg','Дефекты и локализация электронов в PbTe; рисунок 1','Defects and electron localization in PbTe; Figure 1'),
 ('Моделирование PbTe','Simulating PbTe','DFT и потенциалы машинного обучения для расчета деформации.','DFT and machine-learning potentials for deformation simulations.','Journal of Materials Chemistry A · 2025','10.1039/d5ta00823a','pbte-simulation.png','Моделирование деформации PbTe; рисунок 6','PbTe deformation simulations; Figure 6')]
@@ -41,15 +41,12 @@ for i,(area,field,work) in enumerate(zip(AREA_IDS,FIELDS,WORKS)):
     ru,en,dr,de,_=field
     wr,we,sr,se,journal,doi,img,ar,ae=work
     image_path='assets/images/'+img
-    if i==0:
-        panels.append(f'''<article id="panel-{area}" class="research-panel catalysis-panel" role="tabpanel" aria-labelledby="tab-{area}" tabindex="0"><a class="catalysis-image" href="{image_path}" data-open-image aria-label="Открыть изображение" data-aria-ru="Открыть изображение" data-aria-en="Open image"><img src="{image_path}" alt="{e(ar)}" data-alt-ru="{e(ar)}" data-alt-en="{e(ae)}" width="1280" height="489" fetchpriority="high"></a></article>''')
-        continue
-    art=f'<img class="study-image" src="{image_path}" alt="{e(ar)}" data-alt-ru="{e(ar)}" data-alt-en="{e(ae)}" loading="lazy">'
-    original=link(image_path,'Оригинал','Original').replace('class="text-link"','class="text-link" data-open-image')
     title=next(record['title'] for record in catalog if record.get('doi','').lower()==doi.lower())
-    paper=link('https://doi.org/'+doi,'Публикация','Paper').replace('class="text-link"',f'class="text-link" title="{e(title,quote=True)}"')
-    panels.append(f'''<article id="panel-{area}" class="research-panel {'catalysis-panel' if i==0 else ''}" role="tabpanel" aria-labelledby="tab-{area}" tabindex="0" {'' if i==0 else 'hidden'}><div class="study-copy">{t(ru,en,'p','study-area')}{t(wr,we,'h2')}{t(sr,se,'p','study-description')}<div class="study-reference"><span class="visual-journal">{journal}</span>{paper}</div></div><div class="study-visual">{art}</div><div class="study-caption">{t(ar,ae)}{original}</div></article>''')
-research=heading('Исследования','Research')+f'''<section class="container research-layout"><div class="research-navigation"><div class="research-tabs" role="tablist" aria-orientation="vertical" aria-label="Направления исследований" data-aria-ru="Направления исследований" data-aria-en="Research areas">{tabs}</div><div class="research-tools">{t('Методы','Methods','h2')}<p>DFT · MD · Machine Learning</p><p>VASP · LAMMPS · USPEX · MLIP</p></div></div><div class="research-stage">{''.join(panels)}</div></section>'''
+    image=f'<a class="research-image-link" href="{image_path}" data-open-image aria-label="Открыть изображение" data-aria-ru="Открыть изображение" data-aria-en="Open image"><img class="study-image" src="{image_path}" alt="{e(ar)}" data-alt-ru="{e(ar)}" data-alt-en="{e(ae)}" loading="lazy"></a>'
+    paper=link('https://doi.org/'+doi,journal,journal).replace('class="text-link"',f'class="text-link" title="{e(title,quote=True)}"')
+    credit='' if i==0 else f'<div class="study-caption">{paper}</div>'
+    panels.append(f'''<article id="panel-{area}" class="research-panel" role="tabpanel" aria-labelledby="tab-{area}" tabindex="0" {'' if i==0 else 'hidden'}>{t(dr,de,'p','study-description')}<div class="study-visual">{image}</div>{credit}</article>''')
+research=heading('Исследования','Research')+f'''<section class="container research-layout"><div class="research-navigation"><div class="research-tabs" role="tablist" aria-orientation="vertical" aria-label="Направления исследований" data-aria-ru="Направления исследований" data-aria-en="Research areas">{tabs}</div></div><div class="research-stage">{''.join(panels)}</div></section>'''
 research+=f'''<dialog id="figure-viewer" aria-labelledby="figure-caption"><div class="viewer-header"><p id="figure-caption"></p><button id="close-figure" type="button">{t('Закрыть','Close')} <span aria-hidden="true">×</span></button></div><img id="figure-original" alt=""></dialog>'''
 page('research.html','Исследования','Research',research)
 pub=heading('Публикации','Publications',link(SCHOLAR,'Google Scholar','Google Scholar'))
