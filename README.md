@@ -10,14 +10,16 @@ Open http://127.0.0.1:8766/. The loopback address is available only on this comp
 
 ## Structure
 
-- `index.html`: profile, research directions, featured study and recent reviews
+- `index.html`: name, position, four research topics, profile links and portrait
 - `research.html`: five research areas with supporting DOI links
 - `publications.html`: search across title/authors/journal/DOI/year, year and type filters, chronological/title/review-first sorting
 - `activities.html`: research projects, conferences, reviewing and teaching
-- `cv.html`: selected career milestones; no CV PDF is stored or offered for download
+- `cv.html`: six short career milestones; no CV PDF is stored or offered for download
 - `contact.html`: institutional email and verified profiles
 
-Language switches preserve filters and current page. Preferences persist locally; `?lang=ru` and `?lang=en` override the saved preference. Publication filters are shareable in the URL. Paper titles and journal names retain their original bibliographic language.
+Language switches preserve filters and current page. Preferences persist locally; `?lang=ru` and `?lang=en` override the saved preference. Publication filters and pagination are shareable in the URL. Paper titles and journal names retain their original bibliographic language.
+
+The compact layout uses Segoe UI/Arial throughout. Publications display four records per page on large screens, three on shorter desktop screens, and two on mobile. Search and filters always cover the full catalog. Author lists expand on demand. Short factual headings replace slogans and decorative section numbering.
 
 ## Editing
 
@@ -39,7 +41,7 @@ To refresh Crossref metadata: `python scripts/import_publications.py`. Review th
 
 ## Verification
 
-`scripts/verify.cjs` uses Playwright. Serve on port 8766 and run with this library available through local installation or `NODE_PATH`. It checks six pages, RU/EN at 1440/780/390/320 px, overflow, loaded images, local links, publication search/filter/sort combinations, reload persistence, mobile navigation and DOI uniqueness. Screenshots/logs stay in ignored `.preview/`.
+`scripts/verify.cjs` uses Playwright. Serve on port 8766 and run with this library available through local installation or `NODE_PATH`. It checks six pages, RU/EN at 1440/780/390/320 px, overflow, loaded images, local links, publication search/filter/sort combinations, pagination coverage and persistence, mobile navigation and DOI uniqueness. It also checks that all six pages fit desktop viewports of 1440×900 and 1366×768 with author details closed. Screenshots/logs stay in ignored `.preview/`.
 
 ## Ownership
 
