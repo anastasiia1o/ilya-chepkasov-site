@@ -11,6 +11,27 @@
   const normalize = s => s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const rows = Array.isArray(window.PUBLICATIONS) ? window.PUBLICATIONS : [];
+  const newsList=$('#news-list');
+  function updateNewsControls(){
+    if(!newsList)return;
+    $('#news-prev').disabled=newsList.scrollLeft<2;
+    $('#news-next').disabled=newsList.scrollLeft+newsList.clientWidth>=newsList.scrollWidth-2;
+  }
+  function scrollNews(direction){
+    const step=newsList.clientWidth+24;
+    newsList.scrollBy({left:direction*step,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
+  }
+  if(newsList){
+    $('#news-prev').addEventListener('click',()=>scrollNews(-1));
+    $('#news-next').addEventListener('click',()=>scrollNews(1));
+    newsList.addEventListener('scroll',updateNewsControls,{passive:true});
+    window.addEventListener('resize',updateNewsControls);
+    newsList.addEventListener('keydown',event=>{
+      if(event.target!==newsList)return;
+      if(['ArrowLeft','ArrowRight'].includes(event.key)){event.preventDefault();scrollNews(event.key==='ArrowLeft'?-1:1);}
+      if(['Home','End'].includes(event.key)){event.preventDefault();newsList.scrollTo({left:event.key==='Home'?0:newsList.scrollWidth,behavior:'instant'});}
+    });
+  }
   const researchTabs=all('[role="tab"][data-area]');
   function selectArea(area,focus=false) {
     const active=researchTabs.find(tab=>tab.dataset.area===area);
@@ -61,6 +82,7 @@
     all('a[href*="scholar.google.com/citations?user="]').forEach(a => {const url = new URL(a.href);url.searchParams.set('hl',lang);a.href=url.href;});
     all('a[href$=".html"],a[href*=".html?"]').forEach(a => {const url = new URL(a.href);url.searchParams.set('lang',lang);a.href=url.href;});
     renderPublications();
+    requestAnimationFrame(updateNewsControls);
   }
   all('[data-lang]').forEach(button => button.addEventListener('click',() => {
     lang=button.dataset.lang;

@@ -12,8 +12,8 @@ Public access is disabled at the user's request on 2026-10-05. GitHub Pages is d
 
 ## Structure
 
-- `index.html`: name, position, four research topics, profile links and portrait
-- `research.html`: five large interactive research panels, brief descriptions, corresponding papers/figures and supporting DOI links; the battery panel uses a horizontal original figure from the 2025 organic-anode study
+- `index.html`: name, full institutional affiliation, degree, four research topics, profile links, portrait and eight dated news/media digests
+- `research.html`: five large interactive research panels, brief descriptions, corresponding papers/figures and supporting DOI links; the battery panel shows a horizontal detail of the graphene/MoS2 atomic model from Chepkasov's 2022 study (reproduced in his 2025 review), with the full original accessible on click
 - `publications.html`: search across title/authors/journal/DOI/year, year and type filters, chronological/title/review-first sorting
 - `activities.html`: research projects, conferences, reviewing and teaching
 - `cv.html`: six short career milestones; no CV PDF is stored or offered for download
@@ -21,7 +21,7 @@ Public access is disabled at the user's request on 2026-10-05. GitHub Pages is d
 
 Language switches preserve filters and current page. Preferences persist locally; `?lang=ru` and `?lang=en` override the saved preference. Publication filters are shareable in the URL. Paper titles and journal names retain their original bibliographic language.
 
-The compact layout uses Segoe UI/Arial throughout. Publications form one continuous scrollable list on all screens. Search and filters cover the full catalog; author lists expand on demand. Other pages remain compact. Short factual headings replace slogans and decorative section numbering. Homepage topic links open the corresponding research area. The selected area persists in `?area=` across language changes; tabs support arrow keys, Home and End. Five large topic panels switch between a concise bilingual description and the corresponding original illustration. The nanocatalysis description covers bimetallic/core–shell nanoparticles and adsorption/catalytic properties. It does not restore the removed Pt/C heading or journal label. All figure images open in the original-figure modal, which closes with Escape. Display width is limited to 640 CSS pixels for the supplied 1280×489 illustration. Other directions retain small journal/DOI links. Navigation, body text, controls and metadata use slightly larger type throughout the site. Source originals and image credits are preserved.
+The compact layout uses Segoe UI/Arial throughout, with an cool graphite, light gray and desaturated steel blue palette. Research topic panels use bold labels. The homepage starts directly with the name and portrait, without the former discipline eyebrow. Publications form one continuous scrollable list on all screens. Search and filters cover the full catalog; author lists expand on demand. Other pages remain compact. Homepage news is a manually maintained horizontal list: three digests on desktop, two on tablets and one on phones, with buttons, keyboard and native touch scrolling. The eight source-checked items include Skoltech coverage and a Kommersant feature; summaries and controls switch RU/EN. Short factual headings replace slogans and decorative section numbering. Homepage topic links open the corresponding research area. The selected area persists in `?area=` across language changes; tabs support arrow keys, Home and End. Five large topic panels switch between a concise bilingual description and the corresponding original illustration. The nanocatalysis description covers bimetallic/core–shell nanoparticles and adsorption/catalytic properties. It does not restore the removed Pt/C heading or journal label. All figure images open in the original-figure modal, which closes with Escape. Display width is limited to 640 CSS pixels for the supplied 1280×489 illustration. Other directions retain small journal/DOI links. Navigation, body text, controls and metadata use slightly larger type throughout the site. Source originals and image credits are preserved.
 
 ## Editing
 
@@ -43,7 +43,7 @@ To refresh Crossref metadata: `python scripts/import_publications.py`. Review th
 
 ## Verification
 
-`scripts/verify.cjs` uses Playwright. Serve on port 8766 and run with this library available through local installation or `NODE_PATH`. It checks six pages, RU/EN at 1440/780/390/320 px, overflow, loaded images and background asset, local links, publication search/filter/sort combinations, full-list coverage, mobile navigation and DOI uniqueness. It also checks research tabs, keyboard operation, deep links, language-state persistence, original-figure modal bounds/decoding/Escape, and supporting DOI membership in the verified catalog. Pages other than publications fit desktop viewports of 1440×900 and 1366×768. Screenshots/logs stay in ignored `.preview/`.
+`scripts/verify.cjs` uses Playwright. Serve on port 8766 and run with this library available through local installation or `NODE_PATH`. It checks six pages, RU/EN at 1440/780/390/320 px, overflow, loaded images and background asset, dated news/media digests and scrolling controls, local links, publication search/filter/sort combinations, full-list coverage, mobile navigation and DOI uniqueness. It also checks research tabs, keyboard operation, deep links, language-state persistence, original-figure modal bounds/decoding/Escape, and supporting DOI membership in the verified catalog. Pages other than publications fit desktop viewports of 1440×900 and 1366×768. Screenshots/logs stay in ignored `.preview/`.
 
 ## Ownership
 
