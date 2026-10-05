@@ -74,9 +74,10 @@ const path=require('node:path');
   }
  }
  await page.goto('http://127.0.0.1:8766/research.html?lang=ru');
- const background=await page.locator('.research-art').evaluate(el=>getComputedStyle(el).backgroundImage);
- assert(background.includes('pt-carbon.jpg'));
- assert.equal(await page.locator('.research-aside figure').count(),0);
+ assert.equal(await page.locator('#panel-catalysis').innerText(),'');
+ assert.equal(await page.locator('#panel-catalysis img').count(),1);
+ assert.equal(await page.locator('#panel-catalysis .study-copy,#panel-catalysis .study-caption').count(),0);
+ assert.equal(await page.locator('#panel-catalysis img').evaluate(i=>getComputedStyle(i).filter),'none');
  await page.evaluate(async()=>{const i=new Image();i.src='assets/images/pt-carbon.jpg';await i.decode();});
  await page.screenshot({path:'.preview/research-background.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});
@@ -110,7 +111,7 @@ const path=require('node:path');
   await page.locator(`#panel-${area} [data-open-image]`).click();
   assert.equal(await page.locator('#figure-viewer').isVisible(),true);
   await page.locator('#figure-original').evaluate(i=>i.decode());
-  const expected=await page.locator(`#panel-${area} .study-caption [data-en]`).first().getAttribute('data-en');
+  const expected=area==='catalysis'?await page.locator('#panel-catalysis img').getAttribute('data-alt-en'):await page.locator(`#panel-${area} .study-caption [data-en]`).first().getAttribute('data-en');
   assert.equal(await page.locator('#figure-original').getAttribute('alt'),expected);
   assert.equal(await page.evaluate(()=>{const box=document.querySelector('#figure-viewer').getBoundingClientRect();return box.left>=0&&box.right<=innerWidth&&box.top>=0&&box.bottom<=innerHeight;}),true);
   await page.keyboard.press('Escape');assert.equal(await page.locator('#figure-viewer').isVisible(),false);

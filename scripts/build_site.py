@@ -41,7 +41,10 @@ for i,(area,field,work) in enumerate(zip(AREA_IDS,FIELDS,WORKS)):
     ru,en,dr,de,_=field
     wr,we,sr,se,journal,doi,img,ar,ae=work
     image_path='assets/images/'+img
-    art='<div class="research-art" aria-hidden="true"></div>' if i==0 else f'<img class="study-image" src="{image_path}" alt="{e(ar)}" data-alt-ru="{e(ar)}" data-alt-en="{e(ae)}" loading="lazy">'
+    if i==0:
+        panels.append(f'''<article id="panel-{area}" class="research-panel catalysis-panel" role="tabpanel" aria-labelledby="tab-{area}" tabindex="0"><a class="catalysis-image" href="{image_path}" data-open-image aria-label="Открыть изображение" data-aria-ru="Открыть изображение" data-aria-en="Open image"><img src="{image_path}" alt="{e(ar)}" data-alt-ru="{e(ar)}" data-alt-en="{e(ae)}" width="1280" height="489" fetchpriority="high"></a></article>''')
+        continue
+    art=f'<img class="study-image" src="{image_path}" alt="{e(ar)}" data-alt-ru="{e(ar)}" data-alt-en="{e(ae)}" loading="lazy">'
     original=link(image_path,'Оригинал','Original').replace('class="text-link"','class="text-link" data-open-image')
     title=next(record['title'] for record in catalog if record.get('doi','').lower()==doi.lower())
     paper=link('https://doi.org/'+doi,'Публикация','Paper').replace('class="text-link"',f'class="text-link" title="{e(title,quote=True)}"')

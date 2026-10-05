@@ -35,9 +35,11 @@
   all('[data-open-image]').forEach(link=>link.addEventListener('click',event=>{
     if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
     event.preventDefault();
-    const caption=link.closest('.study-caption').querySelector('[data-ru]');
-    const output=$('#figure-caption');output.dataset.ru=caption.dataset.ru;output.dataset.en=caption.dataset.en;output.textContent=caption.dataset[lang];
-    const img=$('#figure-original');img.src=link.href;img.dataset.altRu=caption.dataset.ru;img.dataset.altEn=caption.dataset.en;img.alt=caption.dataset[lang];
+    const caption=link.closest('.study-caption')?.querySelector('[data-ru]');
+    const source=link.querySelector('img');
+    const ru=caption?.dataset.ru||source.dataset.altRu,en=caption?.dataset.en||source.dataset.altEn;
+    const output=$('#figure-caption');output.dataset.ru=ru;output.dataset.en=en;output.textContent=lang==='ru'?ru:en;
+    const img=$('#figure-original');img.src=link.href;img.dataset.altRu=ru;img.dataset.altEn=en;img.alt=lang==='ru'?ru:en;
     viewer.showModal();
   }));
   $('#close-figure')?.addEventListener('click',()=>viewer.close());

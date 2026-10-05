@@ -14,13 +14,13 @@
 
 All selected studies list I. V. Chepkasov as an author in the IOCD publication list, their PDFs and/or publisher metadata. Concise descriptions state the study subject without assigning individual contributions.
 
-- Nanocatalysis: supplied `pt-carbon.jpg`, DOI 10.1002/smll.202510144 (Small, 2025). Only the presentation background crops/fades the hand motif; the full original is available in the figure viewer.
+- Nanocatalysis: supplied `pt-carbon.jpg`, DOI 10.1002/smll.202510144 (Small, 2025). At the user's request, this panel shows only the complete original illustration, without website text, journal citation or caption. The unmodified 1280×489 source is displayed at no more than 640 CSS pixels wide, with no fading, blur or enlargement; clicking opens the full original. Attribution remains documented here and the paper remains in the publication catalog.
 - Battery materials: `battery-review.webp` copied unchanged from https://iocd.ru/assets/review/2026_JPMS101713.webp; DOI 10.1016/j.pmatsci.2026.101713 (Progress in Materials Science, 2026). Illustrates the coauthored review, not original experimental results attributed to Ilya.
 - Two-dimensional materials: `v3s4-monolayer.jpg`, original embedded Figure 2 extracted from https://iocd.ru/assets/pdfs/all_publications/2022_%D1%81omputational_%20design_of_gas_sensors.pdf; DOI 10.3390/nano12050774 (Nanomaterials, 2022). Full atomic/phonon/band panels are preserved.
 - Thermoelectrics: `pbte-defects.jpg`, original embedded Figure 1 extracted from https://iocd.ru/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf; DOI 10.1039/d5ta00823a (Journal of Materials Chemistry A, 2025).
 - Atomistic modeling: `pbte-simulation.png`, original embedded Figure 6 from the same PbTe paper; the paper explicitly describes DFT and neural-network interatomic potentials for deformation simulations. The thermoelectrics and modeling tabs intentionally illustrate two aspects of the same verified study.
 
-PDFs used for inspection remain in ignored `.preview/`, and are not distributed as part of the website. Figures retain their original colors, labels and geometry; each is credited to its paper through a visible journal/year/DOI link. This records provenance and does not claim a new redistribution license. Before any public publication, image permissions should be confirmed with the recipient/publishers; the current site is private.
+PDFs used for inspection remain in ignored `.preview/`, and are not distributed as part of the website. Figures retain their original colors, labels and geometry. Other research panels retain visible journal/year/DOI links; the nanocatalysis panel's source is recorded above. This records provenance and does not claim a new redistribution license. Before any public publication, image permissions should be confirmed with the recipient/publishers; the current site is private.
 
 ## Bibliographic corrections
 
