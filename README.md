@@ -1,12 +1,16 @@
 # Ilya Chepkasov — academic website
 
-Private working version of a six-page RU/EN scientific profile. Static HTML, CSS and JavaScript; no build dependencies, external fonts, trackers, forms or runtime API keys.
+Six-page RU/EN scientific profile, published directly from this repository through GitHub Pages. Static HTML, CSS and JavaScript; no build dependencies, external fonts, trackers, forms or runtime API keys.
 
 ## Preview
 
 From this directory: `python -m http.server 8766 --bind 127.0.0.1`
 
-Open http://127.0.0.1:8766/. The loopback address is available only on this computer. `noindex` is included as an indexing precaution; privacy is provided by local preview and the private source repository. GitHub Pages must remain disabled until explicitly authorized.
+Open http://127.0.0.1:8766/ for local preview. The loopback address is available only on this computer.
+
+Public website: https://anastasiia1o.github.io/ilya-chepkasov-site/
+
+GitHub Pages serves the root of `codex/initial-site` in this repository. Regenerate the six pages, verify changes and push this branch to update the live website. No separate deployment copy is required. `.nojekyll` enables direct static-file serving. Public publication was explicitly authorized on 2026-10-05.
 
 ## Structure
 
@@ -45,4 +49,4 @@ To refresh Crossref metadata: `python scripts/import_publications.py`. Review th
 
 ## Ownership
 
-Source remains private. No public deployment or collaborator invitations are configured. Transfer or access sharing will be done after final approval and recipient details.
+The source repository and website are public. Collaborator access and ownership transfer remain unconfigured; they can be handled after recipient details are supplied. Local `.preview/` files, inspection PDFs and verification screenshots are excluded from Git and deployment.

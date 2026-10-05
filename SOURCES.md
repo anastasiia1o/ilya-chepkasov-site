@@ -20,7 +20,7 @@ All selected studies list I. V. Chepkasov as an author in the IOCD publication l
 - Thermoelectrics: `pbte-defects.jpg`, original embedded Figure 1 extracted from https://iocd.ru/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf; DOI 10.1039/d5ta00823a (Journal of Materials Chemistry A, 2025).
 - Atomistic modeling: `pbte-simulation.png`, original embedded Figure 6 from the same PbTe paper; the paper explicitly describes DFT and neural-network interatomic potentials for deformation simulations. The thermoelectrics and modeling tabs intentionally illustrate two aspects of the same verified study.
 
-PDFs used for inspection remain in ignored `.preview/`, and are not distributed as part of the website. Figures retain their original colors, labels and geometry. Other research panels retain visible journal/year/DOI links; the nanocatalysis panel's source is recorded above. This records provenance and does not claim a new redistribution license. Before any public publication, image permissions should be confirmed with the recipient/publishers; the current site is private.
+PDFs used for inspection remain in ignored `.preview/`, and are not distributed as part of the website. Figures retain their original colors, labels and geometry. Other research panels retain visible journal/year/DOI links; the nanocatalysis panel's source is recorded above. This records provenance and does not claim a new redistribution license. Direct public website publication from the existing repository was explicitly authorized by the user on 2026-10-05.
 
 ## Bibliographic corrections
 
