@@ -60,3 +60,7 @@ At the user's request, 19 unchanged PDF files from the IOCD GitHub repository ar
 ## Publication title typography — 2026-10-06
 
 Chemical stoichiometries and alloy fractions in 12 titles are displayed with HTML subscript: Li3MX6, DyF3, XF3, Li2B12H12, TcH1.3, CO2, V3S4, MoS2, Fe3O4, AgxCu1-x and CuxAg1-x. Both digits and variable indices are lowered. Decimal 1.3 belongs to the TcH subscript; the 27 GPa pressure remains on the baseline. Publisher Crossref title markup was rechecked for TcH1.3, CO2, MoS2 and alloy fractions. Numeric stoichiometries in unmarked Crossref titles are formatted conventionally. Original catalog strings, DOI URLs, search keys and sorting remain intact; NFKD search accepts Unicode subscript queries as well as ordinary characters. Formula tokens do not wrap within a compound.
+
+## Responsive interface refinement — 2026-10-06
+
+Consolidated the previous layered CSS revisions into a single responsive stylesheet. All pages share alignment and gutters; neutral graphite, near-white surfaces and dark-red hover accents are retained. Controls use a consistent 44 px minimum target and publication inputs retain 16 px text on phones. Hero cards and paired actions share equal dimensions. Figures, source PDFs, publication metadata and subscript formatting are preserved. Google Scholar indexing remains disabled as requested.

@@ -96,6 +96,13 @@
   $('#menu-toggle')?.addEventListener('click',() => {
     const open=$('#nav').classList.toggle('open');$('#menu-toggle').setAttribute('aria-expanded',String(open));
   });
+  function closeMenu(){
+    $('#nav').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');
+  }
+  $('#nav').addEventListener('click',event=>{if(event.target.closest('a'))closeMenu();});
+  document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu();});
+  const mobileNav=matchMedia('(max-width:900px)');
+  mobileNav.addEventListener('change',()=>closeMenu());
   document.addEventListener('keydown',event => {if(event.key==='Escape'){$('#nav').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');}});
   const years = [...new Set(rows.map(r=>r.year))].sort((a,b)=>b-a);
   if ($('#year')) {

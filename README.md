@@ -52,3 +52,9 @@ The source repository and GitHub Pages site are temporarily public at the user's
 ## Publication PDFs
 
 19 PDFs from IOCD are hosted under `assets/pdfs/` and open directly from the publication list. The DOI-to-file manifest in `assets/data/publication-pdfs.json` pins the original repository revision and checksums. Run `python scripts/import_iocd_pdfs.py` to restore these files from GitHub, or supply `--source-dir PATH` for an existing IOCD checkout. Source bytes are preserved. Crossref metadata refreshes preserve `pdf` and `pdfSource` fields.
+
+## Responsive design — 2026-10-06
+
+The shared stylesheet uses one content width, spacing scale and component system across all six pages. Inputs use 16 px text and 48 px height; buttons and publication actions have at least 44 × 44 px hit areas. Mobile navigation switches at 900 px and closes on outside clicks, navigation and breakpoint changes. At small widths the publication year, title and action row use the full content width. Research illustrations preserve their original aspect ratios and full-image viewer.
+
+Run `node scripts/verify_responsive.cjs` with the preview on port 8766. It verifies six pages in RU/EN across 13 widths from 320 to 1920 px, common alignment, touch-target sizes, navigation behavior and publication integrity. Set `SITE_BASE` to a deployed URL for a smaller live smoke check. The existing `scripts/verify.cjs` continues to verify filters, research tabs, image viewer, news controls and local links.
