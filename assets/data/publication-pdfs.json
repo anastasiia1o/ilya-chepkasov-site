@@ -1,0 +1,159 @@
+{
+  "repository": "AlexanderKvashnin/AlexanderKvashnin.github.io",
+  "revision": "de51b1ea39d4e80cf1f753cce37aba5323091171",
+  "checked": "2026-10-06",
+  "files": [
+    {
+      "doi": "10.1002/smll.75835",
+      "source_path": "assets/pdfs/all_publications/2026_Small_PtAu_Gr.pdf",
+      "local_path": "assets/pdfs/2026_10-1002-smll-75835.pdf",
+      "sha256": "49d9aca680cd7253e2a2425340d67102fa0031b31218efbdd924d00f5c3b15cb",
+      "source_blob": "f9a4f27f60186ee0cac55f646999f91a07a1d56c",
+      "pages": 16
+    },
+    {
+      "doi": "10.1016/j.jallcom.2026.190381",
+      "source_path": "assets/pdfs/all_publications/2026_PtPdCuNiCo.pdf",
+      "local_path": "assets/pdfs/2026_10-1016-j-jallcom-2026-190381.pdf",
+      "sha256": "9373d71cd72079d37d9961824cd4e194f1395a8f9807966bf15b59f92abfc411",
+      "source_blob": "83273b54fa119f65e66f5139c0ddfa6feea9d81e",
+      "pages": 11
+    },
+    {
+      "doi": "10.1016/s1872-2067(26)65004-8",
+      "source_path": "assets/pdfs/all_publications/2026_CJC_Pd_NO.pdf",
+      "local_path": "assets/pdfs/2026_10-1016-s1872-2067-26-65004-8.pdf",
+      "sha256": "daf2e5a16e96a24c17dc61662437bc2ab222efcadeb6bbd9acb375b9e8dafbac",
+      "source_blob": "139294a588ac060f5ba5c3ef5a7928064cbb63a7",
+      "pages": 13
+    },
+    {
+      "doi": "10.1016/j.pmatsci.2026.101713",
+      "source_path": "assets/review/2026_JPMS101713.pdf",
+      "local_path": "assets/pdfs/2026_10-1016-j-pmatsci-2026-101713.pdf",
+      "sha256": "95e8be2960b1fc8f24f7a2382c3ccff8ce128d78065fd2a848cf2aacda15b7d6",
+      "source_blob": "990b85ef582ef9ec03b71130c490378cf11a47fa",
+      "pages": 53
+    },
+    {
+      "doi": "10.1016/j.jcat.2025.116102",
+      "source_path": "assets/pdfs/all_publications/2025_Journal_of_Catalysis.pdf",
+      "local_path": "assets/pdfs/2025_10-1016-j-jcat-2025-116102.pdf",
+      "sha256": "cfc10578c32703e3ebaf3ef1c7058280b257ce06f2df8476de723844265373b9",
+      "source_blob": "0476196e5f9600cdce22a92ca87b730fe7b926b4",
+      "pages": 10
+    },
+    {
+      "doi": "10.1002/smll.202510144",
+      "source_path": "assets/pdfs/Catalyst/2025_Small.pdf",
+      "local_path": "assets/pdfs/2025_10-1002-smll-202510144.pdf",
+      "sha256": "019eba6101692ed444ef5291d4ca33ad3c1abbe178c476f3a13cd7517833fcb6",
+      "source_blob": "587bd6c70d0d6792353ba8f0d8f147c571eb6c73",
+      "pages": 13
+    },
+    {
+      "doi": "10.1016/j.mtener.2025.102130",
+      "source_path": "assets/pdfs/all_publications/2025_MTE_core_shell.pdf",
+      "local_path": "assets/pdfs/2025_10-1016-j-mtener-2025-102130.pdf",
+      "sha256": "76e874b8e848e2de2d9e28fcfcbf8ccfdba9470771d2d6c81448906090a83492",
+      "source_blob": "51c558fb30af34816acf8255fc58573862865691",
+      "pages": 14
+    },
+    {
+      "doi": "10.1002/smll.202507040",
+      "source_path": "assets/pdfs/all_publications/2025_ni_nanowires.pdf",
+      "local_path": "assets/pdfs/2025_10-1002-smll-202507040.pdf",
+      "sha256": "6c5a2471cf25ad8763ddcbad1bc332075a042cb7dba745d10a8c47da72e855fd",
+      "source_blob": "7f00ab856138f945f433369a4a2e8b2a291992ee",
+      "pages": 12
+    },
+    {
+      "doi": "10.1002/smll.202508433",
+      "source_path": "assets/pdfs/all_publications/2025_Small_rev.pdf",
+      "local_path": "assets/pdfs/2025_10-1002-smll-202508433.pdf",
+      "sha256": "7caa2a7a5a3a9a249a2a5d3bf0a281fee93a3e7b9329533b63841906780b0930",
+      "source_blob": "f0f207e65f21c29c3944807fa0a7347f00e814f3",
+      "pages": 29
+    },
+    {
+      "doi": "10.1016/j.est.2025.116831",
+      "source_path": "assets/pdfs/all_publications/2025_JES.pdf",
+      "local_path": "assets/pdfs/2025_10-1016-j-est-2025-116831.pdf",
+      "sha256": "2d35f0af3da54581b8b81c68205dfe1a972abec49906572389b36530d7201df0",
+      "source_blob": "e3859494694883eb8d37b299c0169472184e66c9",
+      "pages": 10
+    },
+    {
+      "doi": "10.1039/d5ta00823a",
+      "source_path": "assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf",
+      "local_path": "assets/pdfs/2025_10-1039-d5ta00823a.pdf",
+      "sha256": "e4878e269bf8c252da1ad7791653cf9e20ebd6ed2198a403a4f6260ffad411e8",
+      "source_blob": "b537ea8b4841e055155f6fe0a564b65d091f9211",
+      "pages": 12
+    },
+    {
+      "doi": "10.1063/5.0185002",
+      "source_path": "assets/pdfs/all_publications/2024_apl_pb_te.pdf",
+      "local_path": "assets/pdfs/2024_10-1063-5-0185002.pdf",
+      "sha256": "ef7267b2dc6bbe775f03d574aeb926ca85236357b50721ebf4e4cbe18d013396",
+      "source_blob": "f8910753621f773a0a617f34ff949ff32618969f",
+      "pages": 7
+    },
+    {
+      "doi": "10.1039/d3nr06194a",
+      "source_path": "assets/pdfs/all_publications/2024_nanoscale_str.pdf",
+      "local_path": "assets/pdfs/2024_10-1039-d3nr06194a.pdf",
+      "sha256": "78a407b214b4a8ef27f1d5fe545b25871b7c82e2411ce356937f97c409b7c468",
+      "source_blob": "2eb6ab434e46b494d0405da1f564d73aaa4aa5c2",
+      "pages": 23
+    },
+    {
+      "doi": "10.1038/s41598-024-63676-7",
+      "source_path": "assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf",
+      "local_path": "assets/pdfs/2024_10-1038-s41598-024-63676-7.pdf",
+      "sha256": "b811e7799813758063b51bbb0d04ddea0ecea0b30194f7ab00d50d5ac024d687",
+      "source_blob": "10748a823455a4ad061d7b4efea08dddb06b0c35",
+      "pages": 10
+    },
+    {
+      "doi": "10.1103/physrevb.108.205414",
+      "source_path": "assets/pdfs/all_publications/2023_PRB.pdf",
+      "local_path": "assets/pdfs/2023_10-1103-physrevb-108-205414.pdf",
+      "sha256": "d8b5d5d7f103c647f94db8b3966b1801a7e27daa95d4ab58960aae06244b581c",
+      "source_blob": "7ac5790c489dfa3b61a600b0f016ae894f2dd5f9",
+      "pages": 10
+    },
+    {
+      "doi": "10.1039/d3cp03213b",
+      "source_path": "assets/pdfs/all_publications/2024_PCCP_AuPd.pdf",
+      "local_path": "assets/pdfs/2023_10-1039-d3cp03213b.pdf",
+      "sha256": "88789070f523cb7d4f9fbccb1e9eb2b024be5b5bf7ca105a3b8dde37e4d60fdb",
+      "source_blob": "b3d559981bcc6d470e38cd96b47b18ddab6fa2e2",
+      "pages": 7
+    },
+    {
+      "doi": "10.3390/nano12050774",
+      "source_path": "assets/pdfs/all_publications/2022_сomputational_ design_of_gas_sensors.pdf",
+      "local_path": "assets/pdfs/2022_10-3390-nano12050774.pdf",
+      "sha256": "8c3fe5b5ef75781c9e58c61bc7cfb6d7c8e16f62a0187ef3758e078c8df2d027",
+      "source_blob": "d7f0f99d8f60f783a37aecef3c5c02a16af48b56",
+      "pages": 9
+    },
+    {
+      "doi": "10.1002/agt2.273",
+      "source_path": "assets/pdfs/all_publications/2022_cu_au.pdf",
+      "local_path": "assets/pdfs/2022_10-1002-agt2-273.pdf",
+      "sha256": "f13bb22333f57034fdf85a1a635530e94cad66289d45a6d819356e618c2aba5f",
+      "source_blob": "2be84232e745e44f32b029e78306cb4d9e9fe4b4",
+      "pages": 11
+    },
+    {
+      "doi": "10.1002/adfm.202206289",
+      "source_path": "assets/pdfs/all_publications/2022_large_scale_synthesis_and_applications_of_hafnium_tantalum.pdf",
+      "local_path": "assets/pdfs/2022_10-1002-adfm-202206289.pdf",
+      "sha256": "4760cd590a2ff4ec71875827f89a8ad8a82107c81df1ca529c6398111ea3ea23",
+      "source_blob": "bc6331a15b10896a9e382199bb07c5b64151cf2f",
+      "pages": 10
+    }
+  ]
+}

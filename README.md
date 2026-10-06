@@ -48,3 +48,7 @@ To refresh Crossref metadata: `python scripts/import_publications.py`. Review th
 ## Ownership
 
 The source repository and GitHub Pages site are temporarily public at the user's request. Collaborator access and ownership transfer remain unconfigured; they can be handled after recipient details are supplied. Local `.preview/` files, inspection PDFs and verification screenshots are excluded from Git. Decorative link arrows are removed throughout the site. On phones, the name and portrait share the top row, while position, topic links and primary actions occupy full-width rows.
+
+## Publication PDFs
+
+19 PDFs from IOCD are hosted under `assets/pdfs/` and open directly from the publication list. The DOI-to-file manifest in `assets/data/publication-pdfs.json` pins the original repository revision and checksums. Run `python scripts/import_iocd_pdfs.py` to restore these files from GitHub, or supply `--source-dir PATH` for an existing IOCD checkout. Source bytes are preserved. Crossref metadata refreshes preserve `pdf` and `pdfSource` fields.

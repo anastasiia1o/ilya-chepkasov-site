@@ -19,7 +19,9 @@
     "authors": "Ilya V. Chepkasov, Viktor S. Baidyshev, Aleksandra D. Radina, Michail M. Lukanov, Vladimir S. Baturin, Mikhail Lazarev, Nikita V. Ter‐Oganessian, Alexey S. Galushko, Mikhail N. Khrizanforov, Valentine P. Ananikov, Alexander G. Kvashnin",
     "volume": "",
     "pages": "e75835",
-    "source": "https://api.crossref.org/works/10.1002/smll.75835"
+    "source": "https://api.crossref.org/works/10.1002/smll.75835",
+    "pdf": "assets/pdfs/2026_10-1002-smll-75835.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2026_Small_PtAu_Gr.pdf"
   },
   {
     "title": "Evolution of the PtPdCuNiCo high-entropy alloy nanoparticles structure during thermal treatment: Modeling and in situ study",
@@ -30,7 +32,9 @@
     "authors": "Sergey V. Belenov, Anna A. Gavrilova, Dmitry K. Mauer, Egor R. Beskopylny, Alina K. Nevelskaya, Valeria P. Konovalova, Anna M. Kremneva, Evgeniy Yu. Gerasimov, Viktor S. Baidyshev, Alexander G. Kvashnin, Ilya V. Chepkasov",
     "volume": "1080",
     "pages": "190381",
-    "source": "https://api.crossref.org/works/10.1016/j.jallcom.2026.190381"
+    "source": "https://api.crossref.org/works/10.1016/j.jallcom.2026.190381",
+    "pdf": "assets/pdfs/2026_10-1016-j-jallcom-2026-190381.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2026_PtPdCuNiCo.pdf"
   },
   {
     "title": "Reactive gas modulation alters metal nanostructures nuclearity and boosts catalytic activity",
@@ -41,7 +45,9 @@
     "authors": "Alexey S. Galushko, Ilya V. Chepkasov, Ruslan R. Shaydullin, Daniil A. Boiko, Alexander G. Kvashnin, Artem M. Abakumov, Valentine P. Ananikov",
     "volume": "84",
     "pages": "324-336",
-    "source": "https://api.crossref.org/works/10.1016/s1872-2067(26)65004-8"
+    "source": "https://api.crossref.org/works/10.1016/s1872-2067(26)65004-8",
+    "pdf": "assets/pdfs/2026_10-1016-s1872-2067-26-65004-8.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2026_CJC_Pd_NO.pdf"
   },
   {
     "title": "Recent advances, challenges and future perspectives of polycyclic aromatic hydrocarbons as materials for metal-ion batteries – A comprehensive review",
@@ -52,7 +58,9 @@
     "authors": "Ilya V. Chepkasov, Stanislav A. Evlashin, Alexander G. Kvashnin",
     "volume": "161",
     "pages": "101713",
-    "source": "https://api.crossref.org/works/10.1016/j.pmatsci.2026.101713"
+    "source": "https://api.crossref.org/works/10.1016/j.pmatsci.2026.101713",
+    "pdf": "assets/pdfs/2026_10-1016-j-pmatsci-2026-101713.pdf",
+    "pdfSource": "https://iocd.ru/assets/review/2026_JPMS101713.pdf"
   },
   {
     "title": "Towards structure-property prediction in DyF3 nanoclusters",
@@ -74,7 +82,9 @@
     "authors": "Ilya V. Chepkasov, Viktor S. Baidyshev, Anastasiia V. Iosimovska, Ivan S. Zamulin, Alexander G. Kvashnin",
     "volume": "447",
     "pages": "116102",
-    "source": "https://api.crossref.org/works/10.1016/j.jcat.2025.116102"
+    "source": "https://api.crossref.org/works/10.1016/j.jcat.2025.116102",
+    "pdf": "assets/pdfs/2025_10-1016-j-jcat-2025-116102.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2025_Journal_of_Catalysis.pdf"
   },
   {
     "title": "Boosting the Performance of Pt/C Catalysts via Nitrogen‐Doped Carbon Support: Insights from Structural and Electrochemical Characterization",
@@ -85,7 +95,9 @@
     "authors": "Yulia A. Bayan, Egor R. Beskopylny, Evgeny U. Gerasimov, Egor E. Aydakov, Kirill K. Volik, Ilya V. Pankov, Ilya V. Chepkasov, Michael M. Lukanov, Alexander G. Kvashnin, Anastasia A. Alekseenko",
     "volume": "21",
     "pages": "e10144",
-    "source": "https://api.crossref.org/works/10.1002/smll.202510144"
+    "source": "https://api.crossref.org/works/10.1002/smll.202510144",
+    "pdf": "assets/pdfs/2025_10-1002-smll-202510144.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/Catalyst/2025_Small.pdf"
   },
   {
     "title": "Complex investigation of XF3(X = Gd, Tb, Dy, Ho and Er) fluorides under pressure: An ab-initio perspective",
@@ -107,7 +119,9 @@
     "authors": "Ilya V. Chepkasov, Viktor S. Baidyshev, Alexander G. Kvashnin",
     "volume": "54",
     "pages": "102130",
-    "source": "https://api.crossref.org/works/10.1016/j.mtener.2025.102130"
+    "source": "https://api.crossref.org/works/10.1016/j.mtener.2025.102130",
+    "pdf": "assets/pdfs/2025_10-1016-j-mtener-2025-102130.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2025_MTE_core_shell.pdf"
   },
   {
     "title": "Encapsulated Nickel Nanowires Inside Plasma‐treated Single‐Walled Carbon Nanotubes for Urea Oxidation",
@@ -118,7 +132,9 @@
     "authors": "Aliya R. Vildanova, Anastasia E. Goldt, Sergei V. Porokhin, Alexander G. Kvashnin, Viktor S. Baidyshev, Ilya V. Chepkasov, Fedor S. Fedorov, Kseniya A. Litvintseva, Andrey V. Lalov, Veronika A. Dmitrieva, Marina M. Tepliakova, Albert G. Nasibulin",
     "volume": "21",
     "pages": "e07040",
-    "source": "https://api.crossref.org/works/10.1002/smll.202507040"
+    "source": "https://api.crossref.org/works/10.1002/smll.202507040",
+    "pdf": "assets/pdfs/2025_10-1002-smll-202507040.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2025_ni_nanowires.pdf"
   },
   {
     "title": "Multilayers Alkali Metal Structures a Way to High Capacity and Fast Charging Carbon‐Based Metal‐Ion Battery. A Review",
@@ -129,7 +145,9 @@
     "authors": "Ilya V. Chepkasov, Alexander G. Kvashnin",
     "volume": "21",
     "pages": "e08433",
-    "source": "https://api.crossref.org/works/10.1002/smll.202508433"
+    "source": "https://api.crossref.org/works/10.1002/smll.202508433",
+    "pdf": "assets/pdfs/2025_10-1002-smll-202508433.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2025_Small_rev.pdf"
   },
   {
     "title": "Polyaromatic hydrocarbons as prospective anode materials for metal ion battery",
@@ -140,7 +158,9 @@
     "authors": "Ilya V. Chepkasov, Viktor S. Baidyshev, Alexander G. Kvashnin",
     "volume": "125",
     "pages": "116831",
-    "source": "https://api.crossref.org/works/10.1016/j.est.2025.116831"
+    "source": "https://api.crossref.org/works/10.1016/j.est.2025.116831",
+    "pdf": "assets/pdfs/2025_10-1016-j-est-2025-116831.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2025_JES.pdf"
   },
   {
     "title": "Structure transformations and ionic conductivity in germanides of sodium and potassium",
@@ -162,7 +182,9 @@
     "authors": "Ilya V. Chepkasov, Aleksandra D. Radina, Viktor S. Baidyshev, Mikhail Polovinkin, Nikita Rybin, Alexander Shapeev, Artem A. Krikorov, Artem R. Oganov, Zinovi Dashevsky, Dmitry G. Kvashnin, Alexander G. Kvashnin",
     "volume": "13",
     "pages": "31170-31181",
-    "source": "https://api.crossref.org/works/10.1039/d5ta00823a"
+    "source": "https://api.crossref.org/works/10.1039/d5ta00823a",
+    "pdf": "assets/pdfs/2025_10-1039-d5ta00823a.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf"
   },
   {
     "title": "New promising class of anode materials for Ca-ion battery: polyaromatic hydrocarbons",
@@ -184,7 +206,9 @@
     "authors": "Ilya V. Chepkasov, Alexander G. Kvashnin, Aleksandra D. Radina, Nikita A. Matsokin, Faridun N. Jalolov, Dmitry G. Kvashnin, Artem R. Oganov, Zinovi Dashevsky",
     "volume": "124",
     "pages": "022104",
-    "source": "https://api.crossref.org/works/10.1063/5.0185002"
+    "source": "https://api.crossref.org/works/10.1063/5.0185002",
+    "pdf": "assets/pdfs/2024_10-1063-5-0185002.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2024_apl_pb_te.pdf"
   },
   {
     "title": "Structure-driven tuning of catalytic properties of core–shell nanostructures",
@@ -195,7 +219,9 @@
     "authors": "Ilya V. Chepkasov, Aleksandra D. Radina, Alexander G. Kvashnin",
     "volume": "16",
     "pages": "5870-5892",
-    "source": "https://api.crossref.org/works/10.1039/d3nr06194a"
+    "source": "https://api.crossref.org/works/10.1039/d3nr06194a",
+    "pdf": "assets/pdfs/2024_10-1039-d3nr06194a.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2024_nanoscale_str.pdf"
   },
   {
     "title": "Theoretical study of adsorption properties and CO oxidation reaction on surfaces of higher tungsten boride",
@@ -206,7 +232,9 @@
     "authors": "Aleksandra D. Radina, Viktor S. Baidyshev, Ilya V. Chepkasov, Nikita A. Matsokin, Tariq Altalhi, Boris I. Yakobson, Alexander G. Kvashnin",
     "volume": "14",
     "pages": "12788",
-    "source": "https://api.crossref.org/works/10.1038/s41598-024-63676-7"
+    "source": "https://api.crossref.org/works/10.1038/s41598-024-63676-7",
+    "pdf": "assets/pdfs/2024_10-1038-s41598-024-63676-7.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2024_theoretical_study_of_adsorption.pdf"
   },
   {
     "title": "Thermodynamic stability and ionic conductivity in lithium–germanium binary system",
@@ -250,7 +278,9 @@
     "authors": "Ilya V. Chepkasov, Viktor S. Baidyshev, Alexander G. Kvashnin",
     "volume": "108",
     "pages": "205414",
-    "source": "https://api.crossref.org/works/10.1103/physrevb.108.205414"
+    "source": "https://api.crossref.org/works/10.1103/physrevb.108.205414",
+    "pdf": "assets/pdfs/2023_10-1103-physrevb-108-205414.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2023_PRB.pdf"
   },
   {
     "title": "Synthesis of technetium hydride TcH1.3 at 27 GPa",
@@ -283,7 +313,9 @@
     "authors": "Ilya V. Chepkasov, Ivan S. Zamulin, Viktor S. Baidyshev, Alexander G. Kvashnin",
     "volume": "25",
     "pages": "33031-33037",
-    "source": "https://api.crossref.org/works/10.1039/d3cp03213b"
+    "source": "https://api.crossref.org/works/10.1039/d3cp03213b",
+    "pdf": "assets/pdfs/2023_10-1039-d3cp03213b.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2024_PCCP_AuPd.pdf"
   },
   {
     "title": "Ball-Milled Processed, Selective Fe/h-BN Nanocatalysts for CO2 Hydrogenation",
@@ -305,7 +337,9 @@
     "authors": "Ilya V. Chepkasov, Ekaterina V. Sukhanova, Alexander G. Kvashnin, Hayk A. Zakaryan, Misha A. Aghamalyan, Yevgeni Sh. Mamasakhlisov, Anton M. Manakhov, Zakhar I. Popov, Dmitry G. Kvashnin",
     "volume": "12",
     "pages": "774",
-    "source": "https://api.crossref.org/works/10.3390/nano12050774"
+    "source": "https://api.crossref.org/works/10.3390/nano12050774",
+    "pdf": "assets/pdfs/2022_10-3390-nano12050774.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2022_%D1%81omputational_%20design_of_gas_sensors.pdf"
   },
   {
     "title": "Cu–Au nanoparticles produced by the aggregation of gas‐phase metal atoms for CO oxidation",
@@ -316,7 +350,9 @@
     "authors": "Ilya V. Chepkasov, Viktor S. Baidyshev, Artem A. Golubnichiy, Ivan S. Zamulin, Alexander G. Kvashnin, Sergey M. Kozlov",
     "volume": "3",
     "pages": "e273",
-    "source": "https://api.crossref.org/works/10.1002/agt2.273"
+    "source": "https://api.crossref.org/works/10.1002/agt2.273",
+    "pdf": "assets/pdfs/2022_10-1002-agt2-273.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2022_cu_au.pdf"
   },
   {
     "title": "Hexagonal BN- and BNO-supported Au and Pt nanocatalysts in carbon monoxide oxidation and carbon dioxide hydrogenation reactions",
@@ -338,7 +374,9 @@
     "authors": "Alexander G. Kvashnin, Dmitry S. Nikitin, Ivan I. Shanenkov, Ilya V. Chepkasov, Yulia A. Kvashnina, Artur Nassyrbayev, Alexander A. Sivkov, Zhanar Bolatova, Alexander Ya. Pak",
     "volume": "32",
     "pages": "2206289",
-    "source": "https://api.crossref.org/works/10.1002/adfm.202206289"
+    "source": "https://api.crossref.org/works/10.1002/adfm.202206289",
+    "pdf": "assets/pdfs/2022_10-1002-adfm-202206289.pdf",
+    "pdfSource": "https://iocd.ru/assets/pdfs/all_publications/2022_large_scale_synthesis_and_applications_of_hafnium_tantalum.pdf"
   },
   {
     "title": "Prediction of Stable Silver Fluorides",

@@ -20,7 +20,7 @@ All selected studies list I. V. Chepkasov as an author in the IOCD publication l
 - Thermoelectrics: `pbte-defects.jpg`, original embedded Figure 1 extracted from https://iocd.ru/assets/pdfs/Functional_Materials/2025_tuning_of_mechanical.pdf; DOI 10.1039/d5ta00823a (Journal of Materials Chemistry A, 2025).
 - Atomistic modeling: `pbte-simulation.png`, original embedded Figure 6 from the same PbTe paper; the paper explicitly describes DFT and neural-network interatomic potentials for deformation simulations. The thermoelectrics and modeling tabs intentionally illustrate two aspects of the same verified study.
 
-PDFs used for inspection remain in ignored `.preview/`, and are not distributed as part of the website. Source figures retain their original pixels, colors and geometry; the battery overview displays the model panel as a horizontal detail. Other research panels retain visible journal/year/DOI links; the nanocatalysis panel's source is recorded above. This records provenance and does not claim a new redistribution license. The user requested public access to be closed again on 2026-10-05, then explicitly requested temporary publication later the same day; the current preview is public on GitHub Pages with a public repository.
+Inspection copies remain in ignored `.preview/`. Since 2026-10-06, the 19 verified IOCD PDFs listed in `assets/data/publication-pdfs.json` are also available under `assets/pdfs/` through publication buttons. Source figures retain their original pixels, colors and geometry; the battery overview displays the model panel as a horizontal detail. Other research panels retain visible journal/year/DOI links; the nanocatalysis panel's source is recorded above. This records provenance and does not claim a new redistribution license. The user requested public access to be closed again on 2026-10-05, then explicitly requested temporary publication later the same day; the current preview is public on GitHub Pages with a public repository.
 
 ## Bibliographic corrections
 
@@ -45,3 +45,14 @@ Eight short original digests, in descending publication-date order. All sources 
 - 2025-04-09 — amorphization of Ir/Pd nanoparticles and catalytic properties: https://www.skoltech.ru/news/amorphization-alters-nanocatalyst-properties-skoltech-research-shows-impact-structural-disorder
 
 The older Skoltech item about the March 2024 radio appearance was found in search, but its original page could not be opened and a working primary recording was not verified; it is omitted from the website.
+
+## Publication PDFs — checked 2026-10-06
+
+At the user's request, 19 unchanged PDF files from the IOCD GitHub repository are hosted locally on this site. Each file matches a catalog title and, where printed, its DOI on the first page. All three catalog reviews have PDFs. The AuPd surface-properties PDF is the author manuscript supplied by IOCD; its title and author list match the catalog. No publisher-access or license status is inferred from the presence of a file.
+
+- Source repository: https://github.com/AlexanderKvashnin/AlexanderKvashnin.github.io
+- Verified revision: `de51b1ea39d4e80cf1f753cce37aba5323091171`.
+- `assets/data/publication-pdfs.json` records each DOI, original IOCD path, local path, Git blob hash, SHA-256 checksum and page count. Local source bytes were checked against the live repository tree before import.
+- PDFs open in a new browser tab; DOI links and catalog filters remain available. Publications without a working source PDF have no PDF button.
+- The source file `assets/pdfs/all_publications/2023_crystals_ionic_conductivity_of_lithium_phosphides.pdf` contains only two bytes (CR/LF), so the paper DOI `10.3390/cryst13050756` retains its DOI link without a PDF button.
+- `scripts/import_iocd_pdfs.py` imports the pinned manifest with SHA-256 checks. `scripts/import_publications.py` preserves PDF attachments during future metadata refreshes.

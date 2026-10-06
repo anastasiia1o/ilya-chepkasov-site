@@ -43,7 +43,13 @@ if __name__ == '__main__':
     rows=build(raw['message']['items'])
     out=ROOT/'assets/data/publications.json'
     if out.exists():
-        rows += [r for r in json.loads(out.read_text(encoding='utf-8')) if not r.get('doi')]
+        existing=json.loads(out.read_text(encoding='utf-8'))
+        by_doi={r['doi'].lower():r for r in existing if r.get('doi')}
+        for row in rows:
+            previous=by_doi.get(row['doi'].lower(),{})
+            for key in ('pdf','pdfSource'):
+                if key in previous: row[key]=previous[key]
+        rows += [r for r in existing if not r.get('doi')]
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(rows, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     (ROOT/'assets/js/publications-data.js').write_text('window.PUBLICATIONS = '+json.dumps(rows, ensure_ascii=False, indent=2)+';\n', encoding='utf-8')
