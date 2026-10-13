@@ -8,7 +8,9 @@ window.PUBLICATIONS = [
     "authors": "Olgert L. Dallakyan, Alexey P. Maltsev, Ilya V. Chepkasov, Misha A. Aghamalyan, Areg A. Hunanyan, Nane Z. Petrosyan, Mikayel S. Chobanyan, Mikayel T. Sahakyan, Luiza G. Khachatryan, Artem R. Oganov, Hayk A. Zakaryan",
     "volume": "112",
     "pages": "495-504",
-    "source": "https://api.crossref.org/works/10.1016/j.jechem.2025.08.047"
+    "source": "https://api.crossref.org/works/10.1016/j.jechem.2025.08.047",
+    "pdf": "assets/pdfs/2026_10-1016-j-jechem-2025-08-047.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2026_JEC_LiMX.pdf"
   },
   {
     "title": "Defect‐Enhanced Low‐Temperature CO Oxidation on Graphene‐Supported Pt‐Au Nanoclusters",
@@ -71,7 +73,9 @@ window.PUBLICATIONS = [
     "authors": "Regina M. Burganova, Zafari Umar, Ilya V. Chepkasov, Hayk Zakaryan, Irina I. Piyanzina",
     "volume": "1256",
     "pages": "115657",
-    "source": "https://api.crossref.org/works/10.1016/j.comptc.2026.115657"
+    "source": "https://api.crossref.org/works/10.1016/j.comptc.2026.115657",
+    "pdf": "assets/pdfs/2026_10-1016-j-comptc-2026-115657.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2026_CTC_DyF3.pdf"
   },
   {
     "title": "Adsorption properties of crystalline and amorphous PdIr nanoparticles. A systematic first-principles study",
@@ -108,7 +112,9 @@ window.PUBLICATIONS = [
     "authors": "Regina M. Burganova, Zafari Umar, Oleg V. Nedopekin, Ilya V. Chepkasov, Irina I. Piyanzina",
     "volume": "246",
     "pages": "113428",
-    "source": "https://api.crossref.org/works/10.1016/j.commatsci.2024.113428"
+    "source": "https://api.crossref.org/works/10.1016/j.commatsci.2024.113428",
+    "pdf": "assets/pdfs/2025_10-1016-j-commatsci-2024-113428.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2025_CMS.pdf"
   },
   {
     "title": "Core-dictated tuning of the performance of amorphous and crystalline TM@Pt and HEA@Pt core-shell nanoparticles catalysts",
@@ -171,7 +177,9 @@ window.PUBLICATIONS = [
     "authors": "Alexey P. Maltsev, Anastasiia V. Iosimovska, Ilya V. Chepkasov, Artem R. Oganov",
     "volume": "13",
     "pages": "14612-14619",
-    "source": "https://api.crossref.org/works/10.1039/d5ta01128k"
+    "source": "https://api.crossref.org/works/10.1039/d5ta01128k",
+    "pdf": "assets/pdfs/2025_10-1039-d5ta01128k.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2025_JMCA_NaGe.pdf"
   },
   {
     "title": "Tuning of mechanical properties of doped PbTe-based thermoelectric materials driven by intrinsic defects",
@@ -195,7 +203,9 @@ window.PUBLICATIONS = [
     "authors": "Alexey P. Maltsev, Ilya V. Chepkasov, Artem R. Oganov",
     "volume": "39",
     "pages": "101467",
-    "source": "https://api.crossref.org/works/10.1016/j.mtener.2023.101467"
+    "source": "https://api.crossref.org/works/10.1016/j.mtener.2023.101467",
+    "pdf": "assets/pdfs/2024_10-1016-j-mtener-2023-101467.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2024_Mat_today_energy.pdf"
   },
   {
     "title": "Origin of brittle behavior of doped PbTe-based thermoelectric materials",
@@ -245,7 +255,9 @@ window.PUBLICATIONS = [
     "authors": "Anastasiia V. Iosimovska, Alexey P. Maltsev, Ilya V. Chepkasov, Artem R. Oganov",
     "volume": "124",
     "pages": "163904",
-    "source": "https://api.crossref.org/works/10.1063/5.0208577"
+    "source": "https://api.crossref.org/works/10.1063/5.0208577",
+    "pdf": "assets/pdfs/2024_10-1063-5-0208577.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2024_APL_LiGe.pdf"
   },
   {
     "title": "Ionic Conductivity of Lithium Phosphides",
@@ -256,7 +268,9 @@ window.PUBLICATIONS = [
     "authors": "Alexey P. Maltsev, Ilya V. Chepkasov, Alexander G. Kvashnin, Artem R. Oganov",
     "volume": "13",
     "pages": "756",
-    "source": "https://api.crossref.org/works/10.3390/cryst13050756"
+    "source": "https://api.crossref.org/works/10.3390/cryst13050756",
+    "pdf": "assets/pdfs/2023_10-3390-cryst13050756.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2023_Сrystals.pdf"
   },
   {
     "title": "Order–Disorder Phase Transition and Ionic Conductivity in a Li2B12H12 Solid Electrolyte",
@@ -267,7 +281,9 @@ window.PUBLICATIONS = [
     "authors": "Alexey P. Maltsev, Ilya V. Chepkasov, Artem R. Oganov",
     "volume": "15",
     "pages": "42511-42519",
-    "source": "https://api.crossref.org/works/10.1021/acsami.3c07242"
+    "source": "https://api.crossref.org/works/10.1021/acsami.3c07242",
+    "pdf": "assets/pdfs/2023_10-1021-acsami-3c07242.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2023_ACS_AMI.pdf"
   },
   {
     "title": "Structure-driven tuning of O and CO adsorption on AuCu nanoparticles: A density functional theory study",
@@ -302,7 +318,9 @@ window.PUBLICATIONS = [
     "authors": "Ilya V. Chepkasov, Arkady V. Krasheninnikov",
     "volume": "213",
     "pages": "118190",
-    "source": "https://api.crossref.org/works/10.1016/j.carbon.2023.118190"
+    "source": "https://api.crossref.org/works/10.1016/j.carbon.2023.118190",
+    "pdf": "assets/pdfs/2023_10-1016-j-carbon-2023-118190.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2023_Carbon.pdf"
   },
   {
     "title": "Tuning the surface properties of AuPd nanoparticles for adsorption of O and CO",
@@ -326,7 +344,9 @@ window.PUBLICATIONS = [
     "authors": "Denis Leybo, Konstantin L. Firestein, Nikolay D. Evdokimenko, Anastasia A. Ryzhova, Viktor S. Baidyshev, Ilya V. Chepkasov, Zakhar I. Popov, Alexander L. Kustov, Anton S. Konopatsky, Dmitri V. Golberg, Dmitry V. Shtansky",
     "volume": "5",
     "pages": "16475-16488",
-    "source": "https://api.crossref.org/works/10.1021/acsanm.2c03540"
+    "source": "https://api.crossref.org/works/10.1021/acsanm.2c03540",
+    "pdf": "assets/pdfs/2022_10-1021-acsanm-2c03540.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2022_ACS__ANM.pdf"
   },
   {
     "title": "Computational Design of Gas Sensors Based on V3S4 Monolayer",
@@ -363,7 +383,9 @@ window.PUBLICATIONS = [
     "authors": "Andrey M. Kovalskii, Ilia N. Volkov, Nikolay D. Evdokimenko, Olga P. Tkachenko, Denis V. Leybo, Ilya V. Chepkasov, Zakhar I. Popov, Andrei T. Matveev, Anton Manakhov, Elizaveta S. Permyakova, Anton S. Konopatsky, Alexander L. Kustov, Dmitri V. Golberg, Dmitry V. Shtansky",
     "volume": "303",
     "pages": "120891",
-    "source": "https://api.crossref.org/works/10.1016/j.apcatb.2021.120891"
+    "source": "https://api.crossref.org/works/10.1016/j.apcatb.2021.120891",
+    "pdf": "assets/pdfs/2022_10-1016-j-apcatb-2021-120891.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2022_Applied Catalysis_B_Environmental.pdf"
   },
   {
     "title": "Large‐Scale Synthesis and Applications of Hafnium–Tantalum Carbides",
@@ -387,7 +409,9 @@ window.PUBLICATIONS = [
     "authors": "Nikita Rybin, Ilya Chepkasov, Dmitry Y. Novoselov, Vladimir I. Anisimov, Artem R. Oganov",
     "volume": "126",
     "pages": "15057-15063",
-    "source": "https://api.crossref.org/works/10.1021/acs.jpcc.2c04785"
+    "source": "https://api.crossref.org/works/10.1021/acs.jpcc.2c04785",
+    "pdf": "assets/pdfs/2022_10-1021-acs-jpcc-2c04785.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2022_JPCC_AgF.pdf"
   },
   {
     "title": "Single- and Multilayers of Alkali Metal Atoms inside Graphene/MoS2 Heterostructures: A Systematic First-Principles Study",
@@ -398,7 +422,9 @@ window.PUBLICATIONS = [
     "authors": "Ilya V. Chepkasov, Jurgen H. Smet, Arkady V. Krasheninnikov",
     "volume": "126",
     "pages": "15558-15564",
-    "source": "https://api.crossref.org/works/10.1021/acs.jpcc.2c03749"
+    "source": "https://api.crossref.org/works/10.1021/acs.jpcc.2c03749",
+    "pdf": "assets/pdfs/2022_10-1021-acs-jpcc-2c03749.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2022_JPCC_Li_s.pdf"
   },
   {
     "title": "Stabilization of hexazine rings in potassium polynitride at high pressure",
@@ -409,7 +435,9 @@ window.PUBLICATIONS = [
     "authors": "Yu Wang, Maxim Bykov, Ilya Chepkasov, Artem Samtsevich, Elena Bykova, Xiao Zhang, Shu-qing Jiang, Eran Greenberg, Stella Chariton, Vitali B. Prakapenka, Artem R. Oganov, Alexander F. Goncharov",
     "volume": "14",
     "pages": "794-800",
-    "source": "https://api.crossref.org/works/10.1038/s41557-022-00925-0"
+    "source": "https://api.crossref.org/works/10.1038/s41557-022-00925-0",
+    "pdf": "assets/pdfs/2022_10-1038-s41557-022-00925-0.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2022_Nature_Chemistry.pdf"
   },
   {
     "title": "Microstructure and catalytic properties of Fe3O4/BN, Fe3O4(Pt)/BN, and FePt/BN heterogeneous nanomaterials in CO2 hydrogenation reaction: Experimental and theoretical insights",
@@ -420,7 +448,9 @@ window.PUBLICATIONS = [
     "authors": "Anton S. Konopatsky, Konstantin L. Firestein, Nikolai D. Evdokimenko, Alexander L. Kustov, Viktor S. Baidyshev, Il'ya V. Chepkasov, Zahar I. Popov, Andrei T. Matveev, Igor V. Shetinin, Denis V. Leybo, Ilia N. Volkov, Andrey M. Kovalskii, Dmitri Golberg, Dmitry V. Shtansky",
     "volume": "402",
     "pages": "130-142",
-    "source": "https://api.crossref.org/works/10.1016/j.jcat.2021.08.026"
+    "source": "https://api.crossref.org/works/10.1016/j.jcat.2021.08.026",
+    "pdf": "assets/pdfs/2021_10-1016-j-jcat-2021-08-026.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2021_Journal_of_Catalysis.pdf"
   },
   {
     "title": "The Features of Phase Stability of GaN and AlN Films at Nanolevel",
@@ -431,7 +461,9 @@ window.PUBLICATIONS = [
     "authors": "Ilya V. Chepkasov, Sergey V. Erohin, Pavel B. Sorokin",
     "volume": "11",
     "pages": "8",
-    "source": "https://api.crossref.org/works/10.3390/nano11010008"
+    "source": "https://api.crossref.org/works/10.3390/nano11010008",
+    "pdf": "assets/pdfs/2021_10-3390-nano11010008.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2021_Nanomaterials.pdf"
   },
   {
     "title": "Alkali metals inside bi-layer graphene and MoS2: Insights from first-principles calculations",
@@ -442,7 +474,9 @@ window.PUBLICATIONS = [
     "authors": "Ilya V. Chepkasov, Mahdi Ghorbani-Asl, Zakhar I. Popov, Jurgen H. Smet, Arkady V. Krasheninnikov",
     "volume": "75",
     "pages": "104927",
-    "source": "https://api.crossref.org/works/10.1016/j.nanoen.2020.104927"
+    "source": "https://api.crossref.org/works/10.1016/j.nanoen.2020.104927",
+    "pdf": "assets/pdfs/2020_10-1016-j-nanoen-2020-104927.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2020_Nano_energy.pdf"
   },
   {
     "title": "Iron silicides formation on Si (100) and (111) surfaces through theoretical modeling of sputtering and annealing",
@@ -453,7 +487,9 @@ window.PUBLICATIONS = [
     "authors": "I.V. Chepkasov, V.S. Baidyshev, E.V. Sukhanova, M.A. Visotin, P. Süle, Z.I. Popov",
     "volume": "527",
     "pages": "146736",
-    "source": "https://api.crossref.org/works/10.1016/j.apsusc.2020.146736"
+    "source": "https://api.crossref.org/works/10.1016/j.apsusc.2020.146736",
+    "pdf": "assets/pdfs/2020_10-1016-j-apsusc-2020-146736.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2020_Applied_surf_sci.pdf"
   },
   {
     "title": "Polyol Synthesis of Ag/BN Nanohybrids and their Catalytic Stability in CO Oxidation Reaction",
@@ -464,7 +500,9 @@ window.PUBLICATIONS = [
     "authors": "Anton S. Konopatsky, Denis V. Leybo, Konstantin L. Firestein, Ilya V. Chepkasov, Zakhar I. Popov, Elizaveta S. Permyakova, Ilia N. Volkov, Andrey M. Kovalskii, Andrei T. Matveev, Dmitry V. Shtansky, Dmitri V. Golberg",
     "volume": "12",
     "pages": "1691-1698",
-    "source": "https://api.crossref.org/works/10.1002/cctc.201902257"
+    "source": "https://api.crossref.org/works/10.1002/cctc.201902257",
+    "pdf": "assets/pdfs/2020_10-1002-cctc-201902257.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2020_ChemCatChem.pdf"
   },
   {
     "title": "TiCaPCON-Supported Pt- and Fe-Based Nanoparticles and Related Antibacterial Activity",
@@ -475,7 +513,9 @@ window.PUBLICATIONS = [
     "authors": "Viktor A. Ponomarev, Aleksander N. Sheveyko, Elizaveta S. Permyakova, Jihyung Lee, Andrey A. Voevodin, Diana Berman, Anton M. Manakhov, Miroslav Michlíček, Pavel V. Slukin, Viktoriya V. Firstova, Sergey G. Ignatov, Ilya V. Chepkasov, Zakhar I. Popov, Dmitry V. Shtansky",
     "volume": "11",
     "pages": "28699-28719",
-    "source": "https://api.crossref.org/works/10.1021/acsami.9b09649"
+    "source": "https://api.crossref.org/works/10.1021/acsami.9b09649",
+    "pdf": "assets/pdfs/2019_10-1021-acsami-9b09649.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2019_ACSAMI.pdf"
   },
   {
     "title": "Molecular dynamic simulation of melting copper-silicon nanoparticles",
@@ -486,7 +526,9 @@ window.PUBLICATIONS = [
     "authors": "I V Chepkasov, V S Baidyshev, V A Tsura",
     "volume": "1015",
     "pages": "032023",
-    "source": "https://api.crossref.org/works/10.1088/1742-6596/1015/3/032023"
+    "source": "https://api.crossref.org/works/10.1088/1742-6596/1015/3/032023",
+    "pdf": "assets/pdfs/2018_10-1088-1742-6596-1015-3-032023.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2018_JPhys_Conf_Ser_3.pdf"
   },
   {
     "title": "Stability and Electronic Properties of PtPd Nanoparticles via MD and DFT Calculations",
@@ -497,7 +539,9 @@ window.PUBLICATIONS = [
     "authors": "I. V. Chepkasov, M. A. Visotin, E. A. Kovaleva, A. M. Manakhov, V. S. Baidyshev, Z. I. Popov",
     "volume": "122",
     "pages": "18070-18076",
-    "source": "https://api.crossref.org/works/10.1021/acs.jpcc.8b04177"
+    "source": "https://api.crossref.org/works/10.1021/acs.jpcc.8b04177",
+    "pdf": "assets/pdfs/2018_10-1021-acs-jpcc-8b04177.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2018_JPCC.pdf"
   },
   {
     "title": "Structural properties of CuAu nanoparticles with different type. Molecular dynamic simulations",
@@ -508,7 +552,9 @@ window.PUBLICATIONS = [
     "authors": "I V Chepkasov, V S Baidyshev, A Y Baev",
     "volume": "1015",
     "pages": "032022",
-    "source": "https://api.crossref.org/works/10.1088/1742-6596/1015/3/032022"
+    "source": "https://api.crossref.org/works/10.1088/1742-6596/1015/3/032022",
+    "pdf": "assets/pdfs/2018_10-1088-1742-6596-1015-3-032022.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2018_JPhys_Conf_Ser_2.pdf"
   },
   {
     "title": "Study of thermal stability of disordered alloy AgxCu1-x nanoparticles by molecular dynamic simulations",
@@ -519,7 +565,9 @@ window.PUBLICATIONS = [
     "authors": "V S Baidyshev, I V Chepkasov, N D Artemova",
     "volume": "1015",
     "pages": "032021",
-    "source": "https://api.crossref.org/works/10.1088/1742-6596/1015/3/032021"
+    "source": "https://api.crossref.org/works/10.1088/1742-6596/1015/3/032021",
+    "pdf": "assets/pdfs/2018_10-1088-1742-6596-1015-3-032021.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2018_JPhys_Conf_Ser.pdf"
   },
   {
     "title": "A study of melting of various types of Pt–Pd nanoparticles",
@@ -530,7 +578,9 @@ window.PUBLICATIONS = [
     "authors": "I. V. Chepkasov, Yu. Ya. Gafner, M. A. Vysotin, L. V. Redel’",
     "volume": "59",
     "pages": "2076-2081",
-    "source": "https://api.crossref.org/works/10.1134/s1063783417100109"
+    "source": "https://api.crossref.org/works/10.1134/s1063783417100109",
+    "pdf": "assets/pdfs/2017_10-1134-s1063783417100109.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2017_FTT.pdf"
   },
   {
     "title": "ESTIMATION OF STABILITY OF CuAu NANOPARTICLES OF DIFFERENT TYPE",
@@ -563,7 +613,9 @@ window.PUBLICATIONS = [
     "authors": "I. V. Chepkasov, Yu.Ya. Gafner, S. L. Gafner",
     "volume": "90",
     "pages": "590-597",
-    "source": "https://api.crossref.org/works/10.1080/01411594.2016.1239828"
+    "source": "https://api.crossref.org/works/10.1080/01411594.2016.1239828",
+    "pdf": "assets/pdfs/2017_10-1080-01411594-2016-1239828.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2016_Phase_trans.pdf"
   },
   {
     "title": "THERMODYNAMIC STABILITY OF CuxAg1-x NANOPARTICLES",
@@ -585,7 +637,9 @@ window.PUBLICATIONS = [
     "authors": "I.V. Chepkasov, Yu.Ya. Gafner, S.L. Gafner",
     "volume": "91",
     "pages": "33-42",
-    "source": "https://api.crossref.org/works/10.1016/j.jaerosci.2015.09.004"
+    "source": "https://api.crossref.org/works/10.1016/j.jaerosci.2015.09.004",
+    "pdf": "assets/pdfs/2016_10-1016-j-jaerosci-2015-09-004.pdf",
+    "pdfSource": "author-supplied: Dropbox/Статьи/2016_JAS_Cu.pdf"
   },
   {
     "title": "Condensation of Cu nanoparticles from the gas phase",

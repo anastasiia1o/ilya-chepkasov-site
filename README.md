@@ -8,7 +8,13 @@ From this directory: `python -m http.server 8766 --bind 127.0.0.1`
 
 Open http://127.0.0.1:8766/ for local preview. The loopback address is available only on this computer.
 
-The user requested temporary public access again on 2026-10-05. Publish this repository with GitHub Pages from `codex/initial-site` at `/`; the repository is public for this deployment. Public URL: https://anastasiia1o.github.io/ilya-chepkasov-site/ . Keep `noindex,nofollow` for this temporary preview; it discourages indexing but does not restrict access. Regenerate pages, verify changes and push this same branch to update the website. No separate deployment copy is required. No automatic closing time has been configured. Disable Pages and restore private repository visibility when the user asks to close access.
+The user requested temporary public access again on 2026-10-05. Publish this repository with GitHub Pages from `codex/initial-site` at `/`; the repository is public for this deployment. Public URL: https://anastasiia1o.github.io/ilya-chepkasov-site/ . Regenerate pages, verify changes and push this same branch to update the website. No separate deployment copy is required. No automatic closing time has been configured. Disable Pages and restore private repository visibility when the user asks to close access.
+
+## Production — chepkasov.com
+
+Since 2026-10-06 the site is served from reg.ru shared hosting (ispmanager) at https://chepkasov.com, document root `www/chepkasov.com`. HTTPS uses a Let's Encrypt certificate that the panel renews automatically; HTTP redirects to HTTPS. Pages are indexable (no `noindex`), with `robots.txt` and `sitemap.xml` at the root. Deploy by uploading the changed files to the document root; `.git`, `scripts/` and the Markdown notes are not published.
+
+Yandex Metrika is optional: set `METRIKA_ID` in `scripts/build_site.py` and rebuild. When empty, pages contain no analytics code.
 
 ## Structure
 
@@ -51,7 +57,7 @@ The source repository and GitHub Pages site are temporarily public at the user's
 
 ## Publication PDFs
 
-19 PDFs from IOCD are hosted under `assets/pdfs/` and open directly from the publication list. The DOI-to-file manifest in `assets/data/publication-pdfs.json` pins the original repository revision and checksums. Run `python scripts/import_iocd_pdfs.py` to restore these files from GitHub, or supply `--source-dir PATH` for an existing IOCD checkout. Source bytes are preserved. Crossref metadata refreshes preserve `pdf` and `pdfSource` fields.
+46 PDFs are hosted under `assets/pdfs/`: 19 from IOCD and 27 supplied by the author (`pdfSource` starts with `author-supplied:`), matched to catalog entries by the DOI printed in each file. The 19 IOCD PDFs are hosted under `assets/pdfs/` and open directly from the publication list. The DOI-to-file manifest in `assets/data/publication-pdfs.json` pins the original repository revision and checksums. Run `python scripts/import_iocd_pdfs.py` to restore these files from GitHub, or supply `--source-dir PATH` for an existing IOCD checkout. Source bytes are preserved. Crossref metadata refreshes preserve `pdf` and `pdfSource` fields.
 
 ## Responsive design — 2026-10-06
 
